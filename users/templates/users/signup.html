@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'users/style.css' %}">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+          <div class="title"><span>Sign up</span></div>
+          <form action="" method="post">
+              {% csrf_token %}
+
+            <p>Username</p>
+            <div class="row">
+              <i class="fas fa-user"></i>
+              {{ form.username }}
+              <!-- <input type="text" placeholder="Username" name="username" required> -->
+            </div>
+
+            <p>Password</p>
+            <div class="row">
+              <i class="fas fa-lock"></i>
+              {{ form.password1 }}
+              <!-- <input type="password" placeholder="Password" name="password" required> -->
+            </div>
+            <p>Confirm Passoword</p>
+            <div class="row">
+                <i class="fas fa-lock"></i>
+                {{ form.password2 }}
+  
+                <!-- <input type="password" placeholder="Password" name="password" required> -->
+              </div>
+            <!-- <div class="pass"><a href="#">Forgot password?</a></div> -->
+            <div class="row button">
+              <input type="submit" value="Sign Up">
+            </div>
+            <div class="signup-link">already a member ? <a href="{% url 'signin' %}">Login now</a></div>
+          </form>
+        </div>
+      </div>
+    <!-- <div class="signup-form">
+        <h2>Sign Up</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.username.label_tag }}
+            {{ form.username }}
+            {{ form.password1.label_tag }}
+            {{ form.password1 }}
+            {{ form.password2.label_tag }}
+            {{ form.password2 }}
+            <button type="submit">Sign Up</button>
+        </form>
+    </div> -->
+</body>
+</html>

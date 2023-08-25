@@ -1,0 +1,308 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JobEntry - Job Portal Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'home/img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'home/lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'home/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'home/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'home/css/style.css' %}" rel="stylesheet">
+    <style>
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .rating_body {
+            background: var(--background-color);
+            font: 16px/1 Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fill,
+                minmax(var(--rating-size), var(--rating-size))
+            );
+            gap: var(--bar-size);
+            justify-content: start;
+            padding: var(--bar-size);
+        }
+        .form-label{
+            color: black;
+            font-weight: bold;
+
+        }
+        
+
+        :root {
+        --rating-size: 10rem;
+        --bar-size: 1rem;
+        --background-color: #e7f2fa;
+        --rating-color-default: #2980b9;
+        --rating-color-background: #c7e1f3;
+        --rating-color-good: #27ae60;
+        --rating-color-meh: #f1c40f;
+        --rating-color-bad: #e74c3c;
+        }
+
+        /* Rating item */
+        .rating {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        overflow: hidden;
+        
+        background: var(--rating-color-default);
+        color: var(--rating-color-default);
+        width: var(--rating-size);
+        height: var(--rating-size);
+
+        /* Basic style for the text */
+        font-size: calc(var(--rating-size) / 3);
+        line-height: 1;
+        }
+
+        /* Rating circle content */
+        .rating span {
+        position: relative;
+        display: flex;
+        font-weight: bold;
+        z-index: 2;
+        }
+
+        .rating span small {
+        font-size: 0.5em;
+        font-weight: 900;
+        align-self: center;
+        }
+
+        /* Bar mask, creates an inner circle with the same color as thee background */
+        .rating::after {
+        content: "";
+        position: absolute;
+        inset: var(--bar-size);
+        background: var(--background-color);
+        border-radius: inherit;
+        z-index: 1;
+        }
+
+        /* Bar background */
+        .rating::before {
+        content: "";
+        position: absolute;
+        inset: var(--bar-size);
+        border-radius: inherit;
+        box-shadow: 0 0 0 1rem var(--rating-color-background);
+        z-index: -1;
+        }
+
+        /* Classes to give different colors to ratings, based on their score */
+        .rating.good {
+        background: var(--rating-color-good);
+        color: var(--rating-color-good);
+        }
+
+        .rating.meh {
+        background: var(--rating-color-meh);
+        color: var(--rating-color-meh);
+        }
+
+        .rating.bad {
+        background: var(--rating-color-bad);
+        color: var(--rating-color-bad);
+        }
+        /* .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    } */
+    
+        .rating-background {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+        }
+        
+        .rating-body {
+            width: 100px;
+            height: 100px;
+            border: 10px solid #e0e0e0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 auto;
+            background-color: #f8f8f8;
+        }
+        
+        .rating-label {
+            margin-top: 10px;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="/" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+            <h1 class="m-0 text-primary">AI JobEntry</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="/" class="nav-item nav-link active">Home</a>
+                <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+                <a href="{% url 'job_list' %}" class="nav-item nav-link">Jobs</a>
+                <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="{% url 'logout' %}" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Logout<i class="fa fa-arrow-left ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <div class="center-container  container">
+        
+        
+        
+        
+        <div class="row">
+            
+            <div class="col-6">
+                <div class="">
+                    <h4 class="mb-4 text-center">Apply For The Job</h4>
+                    <form class="form__contact" id="contact-form" action="{% url 'edit_info' %}" method="post">
+                        {% csrf_token %}
+                        <div class="row g-3 ">
+                            <div class="col-12 col-sm-6 ">
+                                <label class="form-label" for="">Name</label>
+                                <input type="text" class="form-control" required name="name" placeholder="Your Name" value="{{ details.name }}" style="color: rgb(255, 75, 4);" >
+                            </div>
+                            <div class="col-12 col-sm-6 ">
+                                <label class="form-label" for="">Place</label>
+                                <input type="text" class="form-control" required name="place" placeholder="Your Place" value="{{ details.place }}" style="color: rgb(255, 75, 4);">
+                            </div>
+                            <div class="col-12 col-sm-6 ">
+                                <label class="form-label" for="">Age</label>
+                                <input type="number" class="form-control" required name="age" placeholder="Your Age" value="{{ details.age }}" style="color: rgb(255, 75, 4);">
+                            </div>
+                            <div class="col-12 col-sm-6 ">
+                                <label class="form-label" for="">Experience</label>
+                                <input type="number" class="form-control" required name="experience" placeholder="Your Experience" value="{{ details.experience }}"style="color: rgb(255, 75, 4);">
+                            </div>
+                            <div class="col-12 col-sm-6 ">
+                                <label class="form-label" for="">Phone</label>
+                                <input type="number" class="form-control" required name="phone" placeholder="Your Phone" value="{{ details.phone }}" style="color: rgb(255, 75, 4);" >
+                            </div>
+                            <div class="col-12 col-sm-6 ">
+                                <label class="form-label" for="">Email</label>
+                                <input type="email" class="form-control" required name="email" placeholder="Your Email" value="{{ details.email }}"style="color: rgb(255, 75, 4);" >
+                            </div>
+                            <div class="col-12 col-12 ">
+                                <label class="form-label" for="">Education</label>
+                                <input type="text" class="form-control" required name="education" placeholder="Education" value="{{ details.education }}" style="color: rgb(255, 75, 4);" >
+                            </div>
+                         <div class="col-12 ">
+                                <button class="btn btn-primary w-100" type="submit">Apply Now</button>
+                            </div> 
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-md-6 ">
+                <div class="rating-background">
+                    <h5>Your Score</h5>
+                    <div class="rating rating-body">{{details.score}}%</div>
+                    <div class="rating-label">
+                        <h6 style="color: red;">Resume Skills</h6>
+                        <p style="color: black;">{{details.Rskills}}</p>
+                        <h6 style="color: red;">JD Skills</h6>
+                        <p style="color: black;">{{details.JDskills}} </p>
+                        <h6 style="color: red;">Missing Skills</h6>
+                        <p style="color: black;">{{details.missing_skills}} </p>
+                        <h6 style="color: red;">Tips</h6>
+                        <p style="color: black;">You want to include Job Description skill on your Resume also <br> so you get more score</p>
+                    </div>
+                    <div class="rating_label">
+                        <p></p>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const ratings = document.querySelectorAll(".rating");
+
+        // Iterate over all rating items
+        ratings.forEach((rating) => {
+        // Get content and get score as an int
+        const ratingContent = rating.innerHTML;
+        const ratingScore = parseInt(ratingContent, 10);
+
+        // Define if the score is good, meh or bad according to its value
+        const scoreClass =
+            ratingScore < 40 ? "bad" : ratingScore < 60 ? "meh" : "good";
+
+        // Add score class to the rating
+        rating.classList.add(scoreClass);
+
+        // After adding the class, get its color
+        const ratingColor = window.getComputedStyle(rating).backgroundColor;
+
+        // Define the background gradient according to the score and color
+        const gradient = `background: conic-gradient(${ratingColor} ${ratingScore}%, transparent 0 100%)`;
+
+        // Set the gradient as the rating background
+        rating.setAttribute("style", gradient);
+
+        // Wrap the content in a tag to show it above the pseudo element that masks the bar
+        rating.innerHTML = `<span>${ratingScore} ${
+            ratingContent.indexOf("%") >= 0 ? "<small>%</small>" : ""
+        }</span>`;
+        });
+    </script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'home/lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'home/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'home/lib/waypoints/waypoints.min.js'}"></script>
+    <script src="{% static 'home/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'home/js/main.js' %}"></script>
+</body>
+</html>

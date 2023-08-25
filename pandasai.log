@@ -1,0 +1,2830 @@
+2023-08-14 06:26:01 [INFO] Question: Which are the 5 happiest countries?
+2023-08-14 06:26:01 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:26:01 [INFO] Prompt ID: c5b2282b-8709-4f48-bf26-6bf58a1ed1bd
+2023-08-14 06:26:06 [INFO] 
+                        Code generated:
+                        ```
+                        df_sorted = df.sort_values('happiness_index', ascending=False)
+top_5_happiest_countries = df_sorted.head(5)['country'].tolist()
+top_5_happiest_countries
+                        ```
+                    
+2023-08-14 06:26:06 [INFO] 
+Code running:
+```
+df_sorted = df.sort_values('happiness_index', ascending=False)
+top_5_happiest_countries = df_sorted.head(5)['country'].tolist()
+top_5_happiest_countries
+```
+2023-08-14 06:26:06 [INFO] Answer: ['Canada', 'Australia', 'United Kingdom', 'Germany', 'United States']
+2023-08-14 06:26:06 [INFO] Executed in: 4.753185033798218s
+2023-08-14 06:29:24 [INFO] Question: Which are the 5 happiest countries?
+2023-08-14 06:29:24 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:29:24 [INFO] Prompt ID: 06855800-9b3b-4e8c-abeb-ae086fd2469c
+2023-08-14 06:29:24 [INFO] Using cached response
+2023-08-14 06:29:24 [INFO] 
+Code running:
+```
+df_sorted = df.sort_values('happiness_index', ascending=False)
+top_5_happiest_countries = df_sorted.head(5)['country'].tolist()
+top_5_happiest_countries
+```
+2023-08-14 06:29:24 [INFO] Answer: ['Canada', 'Australia', 'United Kingdom', 'Germany', 'United States']
+2023-08-14 06:29:24 [INFO] Executed in: 0.0034885406494140625s
+2023-08-14 06:30:28 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 06:30:37 [INFO] Question: hai
+2023-08-14 06:30:37 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:30:37 [INFO] Prompt ID: 20d94aeb-4288-4ce0-a24b-c087c82508e0
+2023-08-14 06:30:44 [INFO] Question: how are you
+2023-08-14 06:30:44 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:30:44 [INFO] Prompt ID: cda49a88-a431-47cc-bbf5-4ced63721270
+2023-08-14 06:30:50 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+
+# Create the dataframe
+data = {'country': ['Germany', 'United Kingdom', 'France', 'United States', 'Italy'],
+        'gdp': [2891615567872, 1745433788416, 2259360237, 19294482071552, 9571884729],
+        'happiness_index': [7.07, 6.66, 7.16, 6.38, 6.94]}
+
+df = pd.DataFrame(data)
+
+# Print the dataframe
+print(df)
+                        ```
+                    
+2023-08-14 06:30:50 [INFO] 
+Code running:
+```
+print(df)
+```
+2023-08-14 06:30:50 [INFO] Answer:           country             gdp  happiness_index
+0   United States  19294482071552             6.94
+1  United Kingdom   2891615567872             7.16
+2          France   2411255037952             6.66
+3         Germany   3435817336832             7.07
+4           Italy   1745433788416             6.38
+5           Spain   1181205135360             6.40
+6          Canada   1607402389504             7.23
+7       Australia   1490967855104             7.22
+8           Japan   4380756541440             5.87
+9           China  14631844184064             5.12
+2023-08-14 06:30:50 [INFO] Executed in: 13.813101768493652s
+2023-08-14 06:30:51 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 20, in chat
+    return JsonResponse({"response": response})
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/http/response.py", line 731, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/serializers/json.py", line 106, in default
+    return super().default(o)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type DataFrame is not JSON serializable
+2023-08-14 06:30:57 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+
+data = {'country': ['United Kingdom', 'United States', 'Italy', 'France', 'Germany'],
+        'gdp': [19294482071552, 2891615567872, 9987892845, 8804762068, 3295302113],
+        'happiness_index': [6.66, 6.94, 7.16, 6.38, 7.07]}
+
+df = pd.DataFrame(data)
+
+print(df)
+                        ```
+                    
+2023-08-14 06:30:57 [INFO] 
+Code running:
+```
+print(df)
+```
+2023-08-14 06:30:57 [INFO] Answer:           country             gdp  happiness_index
+0   United States  19294482071552             6.94
+1  United Kingdom   2891615567872             7.16
+2          France   2411255037952             6.66
+3         Germany   3435817336832             7.07
+4           Italy   1745433788416             6.38
+5           Spain   1181205135360             6.40
+6          Canada   1607402389504             7.23
+7       Australia   1490967855104             7.22
+8           Japan   4380756541440             5.87
+9           China  14631844184064             5.12
+2023-08-14 06:30:57 [INFO] Executed in: 12.772773265838623s
+2023-08-14 06:30:57 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 20, in chat
+    return JsonResponse({"response": response})
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/http/response.py", line 731, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/serializers/json.py", line 106, in default
+    return super().default(o)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type DataFrame is not JSON serializable
+2023-08-14 06:31:21 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 06:31:35 [INFO] Question: hai how are you
+2023-08-14 06:31:35 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:31:35 [INFO] Prompt ID: d882a92d-18a0-42e9-9bb2-ac461d6cb6ab
+2023-08-14 06:31:46 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+
+data = {'country': ['United States', 'Germany', 'Italy', 'France', 'United Kingdom'],
+        'gdp': [2411255037952, 19294482071552, 3435817336832, 1745433788416, 9225500551],
+        'happiness_index': [7.07, 6.38, 6.94, 6.66, 7.16]}
+
+df = pd.DataFrame(data)
+
+print(df)
+                        ```
+                    
+2023-08-14 06:31:46 [INFO] 
+Code running:
+```
+print(df)
+```
+2023-08-14 06:31:46 [INFO] Answer:           country             gdp  happiness_index
+0   United States  19294482071552             6.94
+1  United Kingdom   2891615567872             7.16
+2          France   2411255037952             6.66
+3         Germany   3435817336832             7.07
+4           Italy   1745433788416             6.38
+5           Spain   1181205135360             6.40
+6          Canada   1607402389504             7.23
+7       Australia   1490967855104             7.22
+8           Japan   4380756541440             5.87
+9           China  14631844184064             5.12
+2023-08-14 06:31:46 [INFO] Executed in: 11.43667483329773s
+2023-08-14 06:31:46 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 20, in chat
+    return JsonResponse({"response": response})
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/http/response.py", line 731, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/serializers/json.py", line 106, in default
+    return super().default(o)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type DataFrame is not JSON serializable
+2023-08-14 06:32:07 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 06:32:23 [INFO] Question: hai
+2023-08-14 06:32:23 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:32:23 [INFO] Prompt ID: b85d7b27-abc6-4a9d-9f7a-a14230477d2a
+2023-08-14 06:32:32 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 06:33:06 [INFO] Question: Which are the 5 happiest countries?
+2023-08-14 06:33:06 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:33:06 [INFO] Prompt ID: edd2b404-ba76-46f8-a49a-f5e2fed761ef
+2023-08-14 06:33:06 [INFO] Using cached response
+2023-08-14 06:33:06 [INFO] 
+Code running:
+```
+df_sorted = df.sort_values('happiness_index', ascending=False)
+top_5_happiest_countries = df_sorted.head(5)['country'].tolist()
+top_5_happiest_countries
+```
+2023-08-14 06:33:06 [INFO] Answer: ['Canada', 'Australia', 'United Kingdom', 'Germany', 'United States']
+2023-08-14 06:33:06 [INFO] Executed in: 0.008663415908813477s
+2023-08-14 06:33:12 [INFO] Question: how are you
+2023-08-14 06:33:12 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:33:12 [INFO] Prompt ID: 645b83e1-f83e-475e-a2e6-afcafa165b52
+2023-08-14 06:33:12 [INFO] Using cached response
+2023-08-14 06:33:12 [INFO] 
+Code running:
+```
+print(df)
+```
+2023-08-14 06:33:12 [INFO] Answer:           country             gdp  happiness_index
+0   United States  19294482071552             6.94
+1  United Kingdom   2891615567872             7.16
+2          France   2411255037952             6.66
+3         Germany   3435817336832             7.07
+4           Italy   1745433788416             6.38
+5           Spain   1181205135360             6.40
+6          Canada   1607402389504             7.23
+7       Australia   1490967855104             7.22
+8           Japan   4380756541440             5.87
+9           China  14631844184064             5.12
+2023-08-14 06:33:12 [INFO] Executed in: 0.013953208923339844s
+2023-08-14 06:33:12 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 21, in chat
+    return JsonResponse({"response": response})
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/http/response.py", line 731, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/serializers/json.py", line 106, in default
+    return super().default(o)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type DataFrame is not JSON serializable
+2023-08-14 06:34:16 [INFO] Question: What is the sum of the GDPs of the 2 unhappiest countries?
+2023-08-14 06:34:16 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:34:16 [INFO] Prompt ID: 28b35db8-cea4-4b3e-83bc-623b164578d5
+2023-08-14 06:34:31 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+
+data = {'country': ['Italy', 'Germany', 'United States', 'United Kingdom', 'France'],
+        'gdp': [2411255037952, 19294482071552, 3435817336832, 1745433788416, 2967462293],
+        'happiness_index': [6.66, 7.16, 6.38, 6.94, 7.07]}
+
+df = pd.DataFrame(data)
+
+unhappiest_countries = df.nsmallest(2, 'happiness_index')
+sum_gdp_unhappiest = unhappiest_countries['gdp'].sum()
+
+sum_gdp_unhappiest
+                        ```
+                    
+2023-08-14 06:34:31 [INFO] 
+Code running:
+```
+unhappiest_countries = df.nsmallest(2, 'happiness_index')
+sum_gdp_unhappiest = unhappiest_countries['gdp'].sum()
+sum_gdp_unhappiest
+```
+2023-08-14 06:34:31 [INFO] Answer: 19012600725504
+2023-08-14 06:34:31 [INFO] Executed in: 15.362525463104248s
+2023-08-14 06:34:31 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 21, in chat
+    return JsonResponse({"response": response})
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/http/response.py", line 731, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/serializers/json.py", line 106, in default
+    return super().default(o)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable
+2023-08-14 06:35:07 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 06:35:17 [INFO] Question: What is the sum of the GDPs of the 2 unhappiest countries?
+2023-08-14 06:35:17 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:35:17 [INFO] Prompt ID: 43023470-4719-4617-b16b-96d287491677
+2023-08-14 06:35:17 [INFO] Using cached response
+2023-08-14 06:35:17 [INFO] 
+Code running:
+```
+unhappiest_countries = df.nsmallest(2, 'happiness_index')
+sum_gdp_unhappiest = unhappiest_countries['gdp'].sum()
+sum_gdp_unhappiest
+```
+2023-08-14 06:35:17 [INFO] Answer: 19012600725504
+2023-08-14 06:35:17 [INFO] Executed in: 0.009542465209960938s
+2023-08-14 06:35:17 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 21, in chat
+    return JsonResponse({"response": response})
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/http/response.py", line 731, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/serializers/json.py", line 106, in default
+    return super().default(o)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable
+2023-08-14 06:37:24 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 06:37:54 [INFO] Question: What is the sum of the GDPs of the 2 unhappiest countries?
+2023-08-14 06:37:54 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:37:54 [INFO] Prompt ID: 6d62be20-f11b-4369-9d28-cc5f4af5135c
+2023-08-14 06:37:54 [INFO] Using cached response
+2023-08-14 06:37:54 [INFO] 
+Code running:
+```
+unhappiest_countries = df.nsmallest(2, 'happiness_index')
+sum_gdp_unhappiest = unhappiest_countries['gdp'].sum()
+sum_gdp_unhappiest
+```
+2023-08-14 06:37:54 [INFO] Answer: 19012600725504
+2023-08-14 06:37:54 [INFO] Executed in: 0.009193181991577148s
+2023-08-14 06:38:14 [INFO] Question: how are you
+2023-08-14 06:38:14 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:38:14 [INFO] Prompt ID: 955991c4-fc3f-4315-8993-b00fe49d3620
+2023-08-14 06:38:14 [INFO] Using cached response
+2023-08-14 06:38:14 [INFO] 
+Code running:
+```
+print(df)
+```
+2023-08-14 06:38:14 [INFO] Answer:           country             gdp  happiness_index
+0   United States  19294482071552             6.94
+1  United Kingdom   2891615567872             7.16
+2          France   2411255037952             6.66
+3         Germany   3435817336832             7.07
+4           Italy   1745433788416             6.38
+5           Spain   1181205135360             6.40
+6          Canada   1607402389504             7.23
+7       Australia   1490967855104             7.22
+8           Japan   4380756541440             5.87
+9           China  14631844184064             5.12
+2023-08-14 06:38:14 [INFO] Executed in: 0.013586044311523438s
+2023-08-14 06:38:22 [INFO] Question: how are you
+2023-08-14 06:38:22 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:38:22 [INFO] Prompt ID: b933c534-dfb8-48e0-8d39-6e2c2d786fcc
+2023-08-14 06:38:22 [INFO] Using cached response
+2023-08-14 06:38:22 [INFO] 
+Code running:
+```
+print(df)
+```
+2023-08-14 06:38:22 [INFO] Answer:           country             gdp  happiness_index
+0   United States  19294482071552             6.94
+1  United Kingdom   2891615567872             7.16
+2          France   2411255037952             6.66
+3         Germany   3435817336832             7.07
+4           Italy   1745433788416             6.38
+5           Spain   1181205135360             6.40
+6          Canada   1607402389504             7.23
+7       Australia   1490967855104             7.22
+8           Japan   4380756541440             5.87
+9           China  14631844184064             5.12
+2023-08-14 06:38:22 [INFO] Executed in: 0.019094228744506836s
+2023-08-14 06:39:40 [INFO] Question: which is the first country
+2023-08-14 06:39:40 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:39:40 [INFO] Prompt ID: e2acc242-1ded-40e9-a73d-e4a0f114da14
+2023-08-14 06:39:43 [INFO] 
+                        Code generated:
+                        ```
+                        df['country'].iloc[0]
+                        ```
+                    
+2023-08-14 06:39:43 [INFO] 
+Code running:
+```
+df['country'].iloc[0]
+```
+2023-08-14 06:39:43 [INFO] Answer: United States
+2023-08-14 06:39:43 [INFO] Executed in: 2.97209095954895s
+2023-08-14 06:43:10 [INFO] Question: Plot the histogram of countries showing for each the gdp, using different colors for each bar
+2023-08-14 06:43:10 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:43:10 [INFO] Prompt ID: b212b107-fcc7-4ed4-84ce-c43b7fe27c00
+2023-08-14 06:43:19 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Plotting the histogram
+plt.bar(df['country'], df['gdp'], color=['red', 'blue', 'green', 'yellow', 'orange'])
+
+# Adding labels and title
+plt.xlabel('Country')
+plt.ylabel('GDP')
+plt.title('GDP of Countries')
+
+# Displaying the plot
+plt.show()
+                        ```
+                    
+2023-08-14 06:43:19 [INFO] 
+Code running:
+```
+plt.bar(df['country'], df['gdp'], color=['red', 'blue', 'green', 'yellow', 'orange'])
+plt.xlabel('Country')
+plt.ylabel('GDP')
+plt.title('GDP of Countries')
+plt.show()
+plt.close('all')
+```
+2023-08-14 06:45:22 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 06:48:21 [INFO] Question: what are the domains
+2023-08-14 06:48:21 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:48:21 [INFO] Prompt ID: 287f3d93-aed4-4e53-9acd-525f0925b12e
+2023-08-14 06:48:25 [INFO] 
+                        Code generated:
+                        ```
+                        domains = df['domain'].unique()
+print(domains)
+                        ```
+                    
+2023-08-14 06:48:25 [INFO] 
+Code running:
+```
+domains = df['domain'].unique()
+print(domains)
+```
+2023-08-14 06:48:25 [INFO] Answer: ['Data Science' 'Mern' 'Data Analytics' 'Mean' 'Java']
+2023-08-14 06:48:25 [INFO] Executed in: 3.7566397190093994s
+2023-08-14 06:48:48 [INFO] Question: How many have age less than 23 in Mern?
+2023-08-14 06:48:48 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:48:48 [INFO] Prompt ID: 69fcd5ae-28bd-42ed-b5f1-92932455779a
+2023-08-14 06:48:53 [INFO] 
+                        Code generated:
+                        ```
+                        count = df[(df['age'] < 23) & (df['domain'] == 'Mern')].shape[0]
+count
+                        ```
+                    
+2023-08-14 06:48:53 [INFO] 
+Code running:
+```
+count = df[(df['age'] < 23) & (df['domain'] == 'Mern')].shape[0]
+count
+```
+2023-08-14 06:48:53 [INFO] Answer: 1
+2023-08-14 06:48:53 [INFO] Executed in: 5.025237560272217s
+2023-08-14 06:49:09 [INFO] Question: shortlist the candidates who have Minimum 5 year experience in Data Science Domain
+2023-08-14 06:49:09 [INFO] Running PandasAI with openai LLM...
+2023-08-14 06:49:09 [INFO] Prompt ID: f9bf8ff0-9ef4-4db7-bf03-aeefa29aab3c
+2023-08-14 06:49:15 [INFO] 
+                        Code generated:
+                        ```
+                        df_filtered = df[df['domain'] == 'Data Science']
+df_filtered = df_filtered[df_filtered['experience'] >= 5]
+df_filtered
+                        ```
+                    
+2023-08-14 06:49:15 [INFO] 
+Code running:
+```
+df_filtered = df[df['domain'] == 'Data Science']
+df_filtered = df_filtered[df_filtered['experience'] >= 5]
+df_filtered
+```
+2023-08-14 06:49:15 [INFO] Answer:     id            name  score        domain                   resume_link  experience  age                                             skills
+3    4          Justin    6.4  Data Science  https://tinyurl.com/2ch23gl3           5   30  library,a simple,charts,r,statistics,data scie...
+40  41  Daneial Tevino    6.2  Data Science  https://tinyurl.com/296ct9ds           5   32  debugging,machine learning,data pipeline,lambd...
+2023-08-14 06:49:15 [INFO] Executed in: 6.036345481872559s
+2023-08-14 08:45:50 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 08:58:35 [INFO] Question: How many have age less than 23 in Mern?
+2023-08-14 08:58:35 [INFO] Running PandasAI with openai LLM...
+2023-08-14 08:58:35 [INFO] Prompt ID: 7591f830-5754-4246-b91e-724137f7ea9f
+2023-08-14 08:58:35 [INFO] Using cached response
+2023-08-14 08:58:35 [INFO] 
+Code running:
+```
+count = df[(df['age'] < 23) & (df['domain'] == 'Mern')].shape[0]
+count
+```
+2023-08-14 08:58:35 [INFO] Answer: 1
+2023-08-14 08:58:35 [INFO] Executed in: 0.008507013320922852s
+2023-08-14 08:58:59 [INFO] Question: shortlist the candidates who have Minimum 5 year experience in Data Science Domain
+2023-08-14 08:58:59 [INFO] Running PandasAI with openai LLM...
+2023-08-14 08:58:59 [INFO] Prompt ID: e869171f-5c71-446d-8aae-2e95ef08f678
+2023-08-14 08:58:59 [INFO] Using cached response
+2023-08-14 08:58:59 [INFO] 
+Code running:
+```
+df_filtered = df[df['domain'] == 'Data Science']
+df_filtered = df_filtered[df_filtered['experience'] >= 5]
+df_filtered
+```
+2023-08-14 08:58:59 [INFO] Answer:     id            name  score        domain                   resume_link  experience  age                                             skills
+3    4          Justin    6.4  Data Science  https://tinyurl.com/2ch23gl3           5   30  library,a simple,charts,r,statistics,data scie...
+40  41  Daneial Tevino    6.2  Data Science  https://tinyurl.com/296ct9ds           5   32  debugging,machine learning,data pipeline,lambd...
+2023-08-14 08:58:59 [INFO] Executed in: 0.051790714263916016s
+2023-08-14 08:59:36 [INFO] Question: plot the histogram of domains for showing count,using different colors for each group
+2023-08-14 08:59:36 [INFO] Running PandasAI with openai LLM...
+2023-08-14 08:59:36 [INFO] Prompt ID: d82e3da5-1c8c-471a-90dd-11b322617008
+2023-08-14 08:59:43 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the dataframe by domain and count the number of occurrences
+domain_counts = df.groupby('domain').size()
+
+# Plot the histogram with different colors for each group
+plt.bar(domain_counts.index, domain_counts.values, color=['red', 'blue', 'green'])
+plt.xlabel('Domain')
+plt.ylabel('Count')
+plt.title('Histogram of Domains')
+plt.show()
+                        ```
+                    
+2023-08-14 08:59:43 [INFO] 
+Code running:
+```
+domain_counts = df.groupby('domain').size()
+plt.bar(domain_counts.index, domain_counts.values, color=['red', 'blue', 'green'])
+plt.xlabel('Domain')
+plt.ylabel('Count')
+plt.title('Histogram of Domains')
+plt.show()
+plt.close('all')
+```
+2023-08-14 09:05:04 [INFO] Question: who have more score
+2023-08-14 09:05:04 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:05:04 [INFO] Prompt ID: d65fce2b-aca8-49de-af3d-daa556f7330e
+2023-08-14 09:05:07 [INFO] 
+                        Code generated:
+                        ```
+                        df[df['score'] == df['score'].max()]['name']
+                        ```
+                    
+2023-08-14 09:05:07 [INFO] 
+Code running:
+```
+df[df['score'] == df['score'].max()]['name']
+```
+2023-08-14 09:05:07 [INFO] Answer: 22    Nadia Delgado
+Name: name, dtype: object
+2023-08-14 09:05:07 [INFO] Executed in: 3.7397546768188477s
+2023-08-14 09:05:29 [INFO] Question: how much is his experience
+2023-08-14 09:05:29 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:05:29 [INFO] Prompt ID: 777560d7-95c4-4207-9cfc-83c96db86690
+2023-08-14 09:05:31 [INFO] 
+                        Code generated:
+                        ```
+                        experience = df['experience'][0]
+experience
+                        ```
+                    
+2023-08-14 09:05:31 [INFO] 
+Code running:
+```
+experience = df['experience'][0]
+experience
+```
+2023-08-14 09:05:31 [INFO] Answer: 2
+2023-08-14 09:05:31 [INFO] Executed in: 2.3715410232543945s
+2023-08-14 09:05:44 [INFO] Question: in which domain he belongs to
+2023-08-14 09:05:44 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:05:44 [INFO] Prompt ID: c5e88551-79ba-4b2f-9b01-c7e1b74f36ad
+2023-08-14 09:05:48 [INFO] 
+                        Code generated:
+                        ```
+                        domain = df['domain'][0]
+domain
+                        ```
+                    
+2023-08-14 09:05:48 [INFO] 
+Code running:
+```
+domain = df['domain'][0]
+domain
+```
+2023-08-14 09:05:48 [INFO] Answer: Data Science
+2023-08-14 09:05:48 [INFO] Executed in: 3.545003890991211s
+2023-08-14 09:06:45 [INFO] Question: you are wrong
+2023-08-14 09:06:45 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:06:45 [INFO] Prompt ID: bd2849d1-7aeb-486f-a16f-c36de52b52a3
+2023-08-14 09:17:10 [INFO] Question: Short list top 3 resumes
+2023-08-14 09:17:10 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:17:10 [INFO] Prompt ID: adcd23fa-e933-45b3-9626-13fb09e320f2
+2023-08-14 09:17:14 [INFO] 
+                        Code generated:
+                        ```
+                        top_resumes = df.nlargest(3, 'score')
+top_resumes
+                        ```
+                    
+2023-08-14 09:17:14 [INFO] 
+Code running:
+```
+top_resumes = df.nlargest(3, 'score')
+top_resumes
+```
+2023-08-14 09:17:14 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 09:17:14 [INFO] Executed in: 3.9796535968780518s
+2023-08-14 09:17:29 [INFO] Question: give their link only
+2023-08-14 09:17:29 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:17:29 [INFO] Prompt ID: 0928ba3e-d8ef-430e-bfbf-8a3effd1ff68
+2023-08-14 09:17:33 [INFO] 
+                        Code generated:
+                        ```
+                        df['resume_link']
+                        ```
+                    
+2023-08-14 09:17:33 [INFO] 
+Code running:
+```
+df['resume_link']
+```
+2023-08-14 09:17:33 [INFO] Answer: 0     https://tinyurl.com/29cr7uj2
+1     https://tinyurl.com/23qmel2z
+2     https://tinyurl.com/2awlgt7n
+3     https://tinyurl.com/2ch23gl3
+4     https://tinyurl.com/25rslgds
+                  ...             
+72    https://tinyurl.com/2yrb3a5h
+73    https://tinyurl.com/296pr65s
+74    https://tinyurl.com/25hzp4cp
+75    https://tinyurl.com/23jyl3yq
+76    https://tinyurl.com/2dbntrbo
+Name: resume_link, Length: 77, dtype: object
+2023-08-14 09:17:33 [INFO] Executed in: 3.9405946731567383s
+2023-08-14 09:20:42 [INFO] Question: how many are from data science domain
+2023-08-14 09:20:42 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:20:42 [INFO] Prompt ID: 17cb175c-5036-4aa8-95eb-cf00c0bc5da6
+2023-08-14 09:20:45 [INFO] 
+                        Code generated:
+                        ```
+                        df[df['domain'] == 'Data Science'].shape[0]
+                        ```
+                    
+2023-08-14 09:20:45 [INFO] 
+Code running:
+```
+df[df['domain'] == 'Data Science'].shape[0]
+```
+2023-08-14 09:20:45 [INFO] Answer: 19
+2023-08-14 09:20:45 [INFO] Executed in: 2.930879592895508s
+2023-08-14 09:20:56 [WARNING] Not Found: /favicon.ico
+2023-08-14 09:21:01 [WARNING] Not Found: /...
+2023-08-14 09:21:10 [INFO] Question: hi
+2023-08-14 09:21:10 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:21:10 [INFO] Prompt ID: 22f1b59b-f4df-43a5-bf48-839a502cc036
+2023-08-14 09:21:25 [INFO] Question: shortlist best 3 resumes
+2023-08-14 09:21:25 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:21:25 [INFO] Prompt ID: fe4a3c49-c5bc-4edd-a9bf-94ac5d7dc217
+2023-08-14 09:21:29 [INFO] 
+                        Code generated:
+                        ```
+                        best_resumes = df.nlargest(3, 'score')
+best_resumes
+                        ```
+                    
+2023-08-14 09:21:29 [INFO] 
+Code running:
+```
+best_resumes = df.nlargest(3, 'score')
+best_resumes
+```
+2023-08-14 09:21:29 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 09:21:29 [INFO] Executed in: 4.176813125610352s
+2023-08-14 09:21:45 [INFO] Question: plot the histogram of domains for showing count,using different colors for each group
+2023-08-14 09:21:45 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:21:45 [INFO] Prompt ID: c69ed32f-705b-4a7a-a094-9d13b3457931
+2023-08-14 09:21:45 [INFO] Using cached response
+2023-08-14 09:21:45 [INFO] 
+Code running:
+```
+domain_counts = df.groupby('domain').size()
+plt.bar(domain_counts.index, domain_counts.values, color=['red', 'blue', 'green'])
+plt.xlabel('Domain')
+plt.ylabel('Count')
+plt.title('Histogram of Domains')
+plt.show()
+plt.close('all')
+```
+2023-08-14 09:21:59 [INFO] Answer: None
+2023-08-14 09:21:59 [INFO] Executed in: 14.413918733596802s
+2023-08-14 09:26:46 [INFO] Question: shortlist top 3 resumes
+2023-08-14 09:26:46 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:26:46 [INFO] Prompt ID: e2d766ab-17a3-4937-92ae-88e7bdd72d96
+2023-08-14 09:26:49 [INFO] 
+                        Code generated:
+                        ```
+                        top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+                        ```
+                    
+2023-08-14 09:26:49 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 09:26:49 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 09:26:49 [INFO] Executed in: 3.3911781311035156s
+2023-08-14 09:27:28 [INFO] Question: how many are from data science
+2023-08-14 09:27:28 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:27:28 [INFO] Prompt ID: 803db058-9481-417a-a5f5-1a632303bffd
+2023-08-14 09:27:34 [INFO] 
+                        Code generated:
+                        ```
+                        df['domain'].value_counts()['Data Science']
+                        ```
+                    
+2023-08-14 09:27:34 [INFO] 
+Code running:
+```
+df['domain'].value_counts()['Data Science']
+```
+2023-08-14 09:27:34 [INFO] Answer: 19
+2023-08-14 09:27:34 [INFO] Executed in: 5.841201543807983s
+2023-08-14 09:27:44 [INFO] Question: who are they
+2023-08-14 09:27:44 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:27:44 [INFO] Prompt ID: 729e74f6-51d5-429d-b8d5-5a1d51f1faad
+2023-08-14 09:27:46 [INFO] 
+                        Code generated:
+                        ```
+                        df['name']
+                        ```
+                    
+2023-08-14 09:27:46 [INFO] 
+Code running:
+```
+df['name']
+```
+2023-08-14 09:27:46 [INFO] Answer: 0           Alexander
+1             Blyethe
+2        Cherry White
+3              Justin
+4              Thrish
+           ...       
+72          Mia moore
+73    Oliva Rodriguez
+74           Sean han
+75     Teodora padilo
+76     William wilson
+Name: name, Length: 77, dtype: object
+2023-08-14 09:27:46 [INFO] Executed in: 2.276982307434082s
+2023-08-14 09:28:09 [INFO] Question: show in a table format with name and resume_link
+2023-08-14 09:28:09 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:28:09 [INFO] Prompt ID: 6f80ff0c-85a6-480e-8fa8-9716b5157943
+2023-08-14 09:28:51 [INFO] Question: how many are from data science,show in a table format with name and resume_link
+2023-08-14 09:28:51 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:28:51 [INFO] Prompt ID: 2fd1ec6f-37fb-4e11-be6c-260af853cbbe
+2023-08-14 09:29:15 [INFO] Question: ok
+2023-08-14 09:29:15 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:29:15 [INFO] Prompt ID: cab6b738-ec81-42ea-8513-2f3adecb972d
+2023-08-14 09:29:59 [INFO] Question: plot the histogram of domains for showing count,using different colors for each group
+2023-08-14 09:29:59 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:29:59 [INFO] Prompt ID: 3d08e9a5-aa85-4219-b73b-d5fe66c79c7c
+2023-08-14 09:29:59 [INFO] Using cached response
+2023-08-14 09:29:59 [INFO] 
+Code running:
+```
+domain_counts = df.groupby('domain').size()
+plt.bar(domain_counts.index, domain_counts.values, color=['red', 'blue', 'green'])
+plt.xlabel('Domain')
+plt.ylabel('Count')
+plt.title('Histogram of Domains')
+plt.show()
+plt.close('all')
+```
+2023-08-14 09:30:04 [INFO] Answer: None
+2023-08-14 09:30:04 [INFO] Executed in: 4.717994928359985s
+2023-08-14 09:32:08 [INFO] Question: plot the histogram of domains for showing count,using different colors for each group
+2023-08-14 09:32:08 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:32:08 [INFO] Prompt ID: 5bbe2378-b62c-43ca-87a3-1e4dc8e70ffb
+2023-08-14 09:32:08 [INFO] Using cached response
+2023-08-14 09:32:08 [INFO] 
+Code running:
+```
+domain_counts = df.groupby('domain').size()
+plt.bar(domain_counts.index, domain_counts.values, color=['red', 'blue', 'green'])
+plt.xlabel('Domain')
+plt.ylabel('Count')
+plt.title('Histogram of Domains')
+plt.show()
+plt.close('all')
+```
+2023-08-14 09:32:12 [INFO] Answer: None
+2023-08-14 09:32:12 [INFO] Executed in: 3.6318585872650146s
+2023-08-14 09:35:18 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 09:36:30 [INFO] Question: shortlist top 3 resumes
+2023-08-14 09:36:30 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:36:30 [INFO] Prompt ID: aeaf937a-2bfc-4695-81de-8f87c4074927
+2023-08-14 09:36:30 [INFO] Using cached response
+2023-08-14 09:36:30 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 09:36:30 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 09:36:30 [INFO] Executed in: 0.02151346206665039s
+2023-08-14 09:37:24 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 09:41:51 [INFO] Question: shortlist top 3 resumes
+2023-08-14 09:41:51 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:41:51 [INFO] Prompt ID: 92e8c5ae-b391-449f-a62a-d7e06ce66b5f
+2023-08-14 09:41:51 [INFO] Using cached response
+2023-08-14 09:41:51 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 09:41:51 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 09:41:51 [INFO] Executed in: 0.021466493606567383s
+2023-08-14 09:41:55 [WARNING] Not Found: /admin/chat_home/22    https://tinyurl.com/2yh5884v/n20    https://tinyurl.com/2aezy46l/n24    https://tinyurl.com/259vq5r3/nName: resume_link, dtype: object
+2023-08-14 09:42:13 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 09:48:21 [INFO] Question: short list top 3 resumes
+2023-08-14 09:48:21 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:48:21 [INFO] Prompt ID: e86c3f51-67d0-43c1-99c7-717e6a091936
+2023-08-14 09:48:26 [INFO] 
+                        Code generated:
+                        ```
+                        top_resumes = df.nlargest(3, 'score')['resume_link'].tolist()
+top_resumes
+                        ```
+                    
+2023-08-14 09:48:26 [INFO] 
+Code running:
+```
+top_resumes = df.nlargest(3, 'score')['resume_link'].tolist()
+top_resumes
+```
+2023-08-14 09:48:26 [INFO] Answer: ['https://tinyurl.com/2yh5884v', 'https://tinyurl.com/2aezy46l', 'https://tinyurl.com/259vq5r3']
+2023-08-14 09:48:26 [INFO] Executed in: 5.027060270309448s
+2023-08-14 09:49:50 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 09:50:15 [INFO] Question: shortlist top 3 resumes
+2023-08-14 09:50:15 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:50:15 [INFO] Prompt ID: b58468cc-5f33-42e5-959d-457fd2602054
+2023-08-14 09:50:15 [INFO] Using cached response
+2023-08-14 09:50:15 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 09:50:15 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 09:50:15 [INFO] Executed in: 0.02615070343017578s
+2023-08-14 09:50:48 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 09:50:59 [INFO] Question: shortlist top 3 resumes
+2023-08-14 09:50:59 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:50:59 [INFO] Prompt ID: 80d4857f-cde0-4a7b-ae85-31fb7ca07763
+2023-08-14 09:50:59 [INFO] Using cached response
+2023-08-14 09:50:59 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 09:50:59 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 09:50:59 [INFO] Executed in: 0.028351783752441406s
+2023-08-14 09:52:32 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 09:52:51 [INFO] Question: shortlist top 3 resumes
+2023-08-14 09:52:51 [INFO] Running PandasAI with openai LLM...
+2023-08-14 09:52:51 [INFO] Prompt ID: bfe56c2e-9e24-4ab9-bc9f-de010dd4944b
+2023-08-14 09:52:51 [INFO] Using cached response
+2023-08-14 09:52:51 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 09:52:51 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 09:52:51 [INFO] Executed in: 0.023695945739746094s
+2023-08-14 09:53:01 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 11:36:18 [INFO] Question: shortlist all top 4 resumes
+2023-08-14 11:36:18 [INFO] Running PandasAI with openai LLM...
+2023-08-14 11:36:18 [INFO] Prompt ID: 0d28de9f-c0ba-4ae4-b227-ba3edc04b04b
+2023-08-14 11:36:21 [INFO] 
+                        Code generated:
+                        ```
+                        top_resumes = df.nlargest(4, 'score')
+top_resumes
+                        ```
+                    
+2023-08-14 11:36:21 [INFO] 
+Code running:
+```
+top_resumes = df.nlargest(4, 'score')
+top_resumes
+```
+2023-08-14 11:36:21 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+26  27   Silas Thomas    7.6   Java  https://tinyurl.com/29d69dny           2   26  back-end engineer,apis,sql,springboot,ui,javas...
+2023-08-14 11:36:21 [INFO] Executed in: 3.7472712993621826s
+2023-08-14 11:36:22 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 25, in chat
+    response = get_Chat_response(msg)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 47, in get_Chat_response
+    text.session['resume_links_list'] = resume_links_list
+AttributeError: 'str' object has no attribute 'session'
+2023-08-14 11:37:11 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 11:37:31 [INFO] Question: short list top 3 resumes
+2023-08-14 11:37:31 [INFO] Running PandasAI with openai LLM...
+2023-08-14 11:37:31 [INFO] Prompt ID: 80e47924-298a-4a83-9d7f-4515a512d256
+2023-08-14 11:37:31 [INFO] Using cached response
+2023-08-14 11:37:31 [INFO] 
+Code running:
+```
+top_resumes = df.nlargest(3, 'score')['resume_link'].tolist()
+top_resumes
+```
+2023-08-14 11:37:31 [INFO] Answer: ['https://tinyurl.com/2yh5884v', 'https://tinyurl.com/2aezy46l', 'https://tinyurl.com/259vq5r3']
+2023-08-14 11:37:31 [INFO] Executed in: 0.006174802780151367s
+2023-08-14 11:37:39 [ERROR] Internal Server Error: /admin/chat_home/download-pdfs/
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 73, in download_pdfs
+    for link in pdf_links:
+TypeError: 'NoneType' object is not iterable
+2023-08-14 11:38:01 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 11:38:59 [INFO] Question: short list top 4 resumes
+2023-08-14 11:38:59 [INFO] Running PandasAI with openai LLM...
+2023-08-14 11:38:59 [INFO] Prompt ID: 8308e94f-92ce-417a-8277-dcf824a3c174
+2023-08-14 11:39:04 [INFO] 
+                        Code generated:
+                        ```
+                        top_resumes = df.head(4)
+top_resumes
+                        ```
+                    
+2023-08-14 11:39:04 [INFO] 
+Code running:
+```
+top_resumes = df.head(4)
+top_resumes
+```
+2023-08-14 11:39:04 [INFO] Answer:    id          name  score        domain                   resume_link  experience  age                                             skills
+0   1     Alexander    6.1  Data Science  https://tinyurl.com/29cr7uj2           2   30  natural language processing,text analysis,Tabl...
+1   2       Blyethe    6.7          Mern  https://tinyurl.com/23qmel2z           1   20  GitLab,testing,bi,CLI,NodeJS,MongoDB,NGINX,Nod...
+2   3  Cherry White    7.3          Mern  https://tinyurl.com/2awlgt7n           3   25  reusable database,Git,Angular,Docker,PHP,Junio...
+3   4        Justin    6.4  Data Science  https://tinyurl.com/2ch23gl3           5   30  library,a simple,charts,r,statistics,data scie...
+2023-08-14 11:39:04 [INFO] Executed in: 4.9667065143585205s
+2023-08-14 11:39:04 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 25, in chat
+    response = get_Chat_response(msg)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 47, in get_Chat_response
+    text.session['resume_links_list'] = resume_links_list
+AttributeError: 'str' object has no attribute 'session'
+2023-08-14 11:40:55 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 11:48:36 [INFO] Question: shortlist top 3 resumes
+2023-08-14 11:48:36 [INFO] Running PandasAI with openai LLM...
+2023-08-14 11:48:36 [INFO] Prompt ID: fff4401b-5506-417b-8b21-6285073eb6c3
+2023-08-14 11:48:36 [INFO] Using cached response
+2023-08-14 11:48:36 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 11:48:36 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 11:48:36 [INFO] Executed in: 0.01715254783630371s
+2023-08-14 11:48:36 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 25, in chat
+    response = get_Chat_response(msg)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 58, in get_Chat_response
+    zipf.write(resume_filename)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/zipfile.py", line 1736, in write
+    zinfo = ZipInfo.from_file(filename, arcname,
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/zipfile.py", line 501, in from_file
+    st = os.stat(filename)
+FileNotFoundError: [Errno 2] No such file or directory: '2yh5884v'
+2023-08-14 11:49:36 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 11:49:51 [INFO] Question: shortlist top 3 resumes
+2023-08-14 11:49:51 [INFO] Running PandasAI with openai LLM...
+2023-08-14 11:49:51 [INFO] Prompt ID: 065744c6-9642-4bcb-b615-1ca522628595
+2023-08-14 11:49:51 [INFO] Using cached response
+2023-08-14 11:49:51 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 11:49:51 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 11:49:51 [INFO] Executed in: 0.0174713134765625s
+2023-08-14 11:49:51 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 25, in chat
+    response = get_Chat_response(msg)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 58, in get_Chat_response
+    zipf.write(resume_filename)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/zipfile.py", line 1736, in write
+    zinfo = ZipInfo.from_file(filename, arcname,
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/zipfile.py", line 501, in from_file
+    st = os.stat(filename)
+FileNotFoundError: [Errno 2] No such file or directory: '2yh5884v'
+2023-08-14 11:49:57 [INFO] Question: shortlist top 3 resumes
+2023-08-14 11:49:57 [INFO] Running PandasAI with openai LLM...
+2023-08-14 11:49:57 [INFO] Prompt ID: cde5b1e9-07d6-4695-bd17-611379aeca96
+2023-08-14 11:49:57 [INFO] Using cached response
+2023-08-14 11:49:57 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 11:49:57 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 11:49:57 [INFO] Executed in: 0.012670755386352539s
+2023-08-14 11:49:57 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 25, in chat
+    response = get_Chat_response(msg)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 58, in get_Chat_response
+    zipf.write(resume_filename)
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/zipfile.py", line 1736, in write
+    zinfo = ZipInfo.from_file(filename, arcname,
+  File "/home/mohammed_shaneeb/anaconda3/lib/python3.9/zipfile.py", line 501, in from_file
+    st = os.stat(filename)
+FileNotFoundError: [Errno 2] No such file or directory: '2yh5884v'
+2023-08-14 11:50:53 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 11:51:14 [INFO] Question: shortlist top 3 resumes
+2023-08-14 11:51:14 [INFO] Running PandasAI with openai LLM...
+2023-08-14 11:51:14 [INFO] Prompt ID: 6328e368-abc2-4598-af53-7abd845284f3
+2023-08-14 11:51:14 [INFO] Using cached response
+2023-08-14 11:51:14 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 11:51:14 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 11:51:14 [INFO] Executed in: 0.017591238021850586s
+2023-08-14 11:51:14 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 25, in chat
+    response = get_Chat_response(msg)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 51, in get_Chat_response
+    response['download_button'] = resume_links_list.apply(make_download_button)
+AttributeError: 'list' object has no attribute 'apply'
+2023-08-14 11:51:47 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 11:56:12 [INFO] Question: shortlist top 3 resumes
+2023-08-14 11:56:12 [INFO] Running PandasAI with openai LLM...
+2023-08-14 11:56:12 [INFO] Prompt ID: ca5d45f1-dd76-4a22-bd13-801c1f93b463
+2023-08-14 11:56:12 [INFO] Using cached response
+2023-08-14 11:56:12 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 11:56:12 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 11:56:12 [INFO] Executed in: 0.02108311653137207s
+2023-08-14 11:56:24 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 11:59:05 [INFO] Question: shortlist top 3 resumes
+2023-08-14 11:59:05 [INFO] Running PandasAI with openai LLM...
+2023-08-14 11:59:05 [INFO] Prompt ID: 5ea85333-df20-4901-b85d-2d07e45c9b7b
+2023-08-14 11:59:05 [INFO] Using cached response
+2023-08-14 11:59:05 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 11:59:05 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 11:59:05 [INFO] Executed in: 0.02468276023864746s
+2023-08-14 11:59:05 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 25, in chat
+    response = get_Chat_response(msg)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 53, in get_Chat_response
+    request.session['resume_links_list'] = resume_links_list
+AttributeError: 'str' object has no attribute 'session'
+2023-08-14 12:00:06 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 12:00:34 [INFO] Question: shortlist top 3 resumes
+2023-08-14 12:00:34 [INFO] Running PandasAI with openai LLM...
+2023-08-14 12:00:34 [INFO] Prompt ID: 2b1dbf1b-c23e-425e-8d02-e3407b9b5787
+2023-08-14 12:00:34 [INFO] Using cached response
+2023-08-14 12:00:34 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 12:00:34 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 12:00:34 [INFO] Executed in: 0.021706581115722656s
+2023-08-14 12:00:34 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 25, in chat
+    response = get_Chat_response(msg)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 53, in get_Chat_response
+    text.session['resume_links_list'] = resume_links_list
+AttributeError: 'str' object has no attribute 'session'
+2023-08-14 12:03:20 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 12:16:37 [INFO] Question: shortlist top 3 resumes
+2023-08-14 12:16:37 [INFO] Running PandasAI with openai LLM...
+2023-08-14 12:16:37 [INFO] Prompt ID: d537c4d3-4dde-45e8-925a-d0c8e2db6aa7
+2023-08-14 12:16:37 [INFO] Using cached response
+2023-08-14 12:16:37 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 12:16:37 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 12:16:37 [INFO] Executed in: 0.028116941452026367s
+2023-08-14 12:17:11 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 12:18:18 [INFO] Question: shortlist top 3 resumes
+2023-08-14 12:18:18 [INFO] Running PandasAI with openai LLM...
+2023-08-14 12:18:18 [INFO] Prompt ID: d741b175-2e7b-4c6c-aa86-6467f2b97458
+2023-08-14 12:18:18 [INFO] Using cached response
+2023-08-14 12:18:18 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 12:18:18 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 12:18:18 [INFO] Executed in: 0.03375697135925293s
+2023-08-14 12:18:56 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 12:20:22 [INFO] Question: shortlist top 3 resumes
+2023-08-14 12:20:22 [INFO] Running PandasAI with openai LLM...
+2023-08-14 12:20:22 [INFO] Prompt ID: ca1ddf89-61b6-4c6f-a6de-383da7d581db
+2023-08-14 12:20:22 [INFO] Using cached response
+2023-08-14 12:20:22 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 12:20:22 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 12:20:22 [INFO] Executed in: 0.025095224380493164s
+2023-08-14 12:20:22 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 26, in chat
+    response = get_Chat_response(msg)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 56, in get_Chat_response
+    zip_buffer = generate_zip_file(resume_links_list, text)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 79, in generate_zip_file
+    response = request.get(resume_link)
+AttributeError: 'str' object has no attribute 'get'
+2023-08-14 12:20:33 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 16:44:29 [INFO] Question: shortlist top 3 resumes
+2023-08-14 16:44:29 [INFO] Running PandasAI with openai LLM...
+2023-08-14 16:44:29 [INFO] Prompt ID: b7c3b1c4-f8e9-49e5-b672-fd6950f18378
+2023-08-14 16:44:29 [INFO] Using cached response
+2023-08-14 16:44:29 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 16:44:29 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 16:44:29 [INFO] Executed in: 0.030392885208129883s
+2023-08-14 16:51:12 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 16:55:49 [INFO] Question: shortlist top 3 resumes
+2023-08-14 16:55:49 [INFO] Running PandasAI with openai LLM...
+2023-08-14 16:55:49 [INFO] Prompt ID: c16bab18-f66f-4f75-8ea0-993150978a69
+2023-08-14 16:55:49 [INFO] Using cached response
+2023-08-14 16:55:49 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 16:55:49 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 16:55:49 [INFO] Executed in: 0.024574756622314453s
+2023-08-14 16:55:54 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 26, in chat
+    response = get_Chat_response(msg,request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 63, in get_Chat_response
+    response_html += f'<a href="data:application/zip;base64,{base64.b64encode(zip_buffer.getvalue()).decode()}" download="{zip_file_name}">Download All Resumes as Zip</a>'
+UnboundLocalError: local variable 'response_html' referenced before assignment
+2023-08-14 16:56:19 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 16:56:39 [INFO] Question: shortlist top 3 resumes
+2023-08-14 16:56:39 [INFO] Running PandasAI with openai LLM...
+2023-08-14 16:56:39 [INFO] Prompt ID: ea9084e9-2d74-4d1f-bec8-d32398c05584
+2023-08-14 16:56:39 [INFO] Using cached response
+2023-08-14 16:56:39 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 16:56:39 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 16:56:39 [INFO] Executed in: 0.019910097122192383s
+2023-08-14 17:00:12 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:00:34 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:00:34 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:00:34 [INFO] Prompt ID: bb0a1926-c9f8-4b06-9ca6-451479b63c19
+2023-08-14 17:00:34 [INFO] Using cached response
+2023-08-14 17:00:34 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:00:34 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:00:34 [INFO] Executed in: 0.01994466781616211s
+2023-08-14 17:04:16 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:05:06 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:05:06 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:05:06 [INFO] Prompt ID: d267b695-f444-49aa-89e2-c7c6c07ca9c0
+2023-08-14 17:05:06 [INFO] Using cached response
+2023-08-14 17:05:06 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:05:06 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:05:06 [INFO] Executed in: 0.018780231475830078s
+2023-08-14 17:05:06 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 26, in chat
+    response = get_Chat_response(msg,request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 60, in get_Chat_response
+    response['resume_link'] = response['resume_link'].apply(make_clickable)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/pandas/core/series.py", line 4771, in apply
+    return SeriesApply(self, func, convert_dtype, args, kwargs).apply()
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/pandas/core/apply.py", line 1123, in apply
+    return self.apply_standard()
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/pandas/core/apply.py", line 1174, in apply_standard
+    mapped = lib.map_infer(
+  File "pandas/_libs/lib.pyx", line 2924, in pandas._libs.lib.map_infer
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 51, in make_clickable
+    link_number = int(filename.split("_")[1])  # Assuming your link is named something like "resume_1.pdf"
+IndexError: list index out of range
+2023-08-14 17:05:17 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:05:29 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:05:29 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:05:29 [INFO] Prompt ID: 13426ea4-99a7-49af-8a1c-e08b8e38c412
+2023-08-14 17:05:29 [INFO] Using cached response
+2023-08-14 17:05:29 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:05:29 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:05:29 [INFO] Executed in: 0.018804311752319336s
+2023-08-14 17:08:45 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:11:05 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:11:05 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:11:05 [INFO] Prompt ID: ba935a00-1964-42b2-87ca-81601332a3f0
+2023-08-14 17:11:05 [INFO] Using cached response
+2023-08-14 17:11:05 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:11:05 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:11:05 [INFO] Executed in: 0.027238845825195312s
+2023-08-14 17:11:10 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 26, in chat
+    response = get_Chat_response(msg,request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 94, in get_Chat_response
+    response_html += f'<a href="data:application/zip;base64,{base64.b64encode(zip_buffer.getvalue()).decode()}" download="{zip_file_name}">Download All Resumes as Zip</a>'
+NameError: name 'zip_file_name' is not defined
+2023-08-14 17:11:45 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:11:59 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:11:59 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:11:59 [INFO] Prompt ID: 469374df-fe9f-4d85-9417-45a7a61cf39e
+2023-08-14 17:11:59 [INFO] Using cached response
+2023-08-14 17:11:59 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:11:59 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:11:59 [INFO] Executed in: 0.018474340438842773s
+2023-08-14 17:13:26 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:13:53 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:13:53 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:13:53 [INFO] Prompt ID: 4971aeeb-8638-4abd-acf3-d77b58b2216a
+2023-08-14 17:13:53 [INFO] Using cached response
+2023-08-14 17:13:53 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:13:53 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:13:53 [INFO] Executed in: 0.021755456924438477s
+2023-08-14 17:14:47 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:16:44 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:16:44 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:16:44 [INFO] Prompt ID: da13853c-cf1c-4cf5-9149-378f226f4fee
+2023-08-14 17:16:44 [INFO] Using cached response
+2023-08-14 17:16:44 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:16:44 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:16:44 [INFO] Executed in: 0.027126073837280273s
+2023-08-14 17:17:38 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:18:50 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:18:50 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:18:50 [INFO] Prompt ID: 64616f48-166f-45cb-961a-a1f5e17d822b
+2023-08-14 17:18:50 [INFO] Using cached response
+2023-08-14 17:18:50 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:18:50 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:18:50 [INFO] Executed in: 0.02189350128173828s
+2023-08-14 17:18:50 [ERROR] Internal Server Error: /admin/chat_home/get
+Traceback (most recent call last):
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 26, in chat
+    response = get_Chat_response(msg,request)
+  File "/home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py", line 75, in get_Chat_response
+    row = response[response['resume_link'] == link]
+UnboundLocalError: local variable 'link' referenced before assignment
+2023-08-14 17:19:12 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:21:05 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:21:05 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:21:05 [INFO] Prompt ID: 4e3223cb-906d-4711-b222-fd89d7277f6c
+2023-08-14 17:21:05 [INFO] Using cached response
+2023-08-14 17:21:05 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:21:05 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:21:05 [INFO] Executed in: 0.02104806900024414s
+2023-08-14 17:21:44 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:23:43 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:23:43 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:23:43 [INFO] Prompt ID: 00a8f756-a802-45ce-a1c9-5e2340c3141f
+2023-08-14 17:23:43 [INFO] Using cached response
+2023-08-14 17:23:43 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:23:43 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:23:43 [INFO] Executed in: 0.025557279586791992s
+2023-08-14 17:24:39 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:24:50 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:24:50 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:24:50 [INFO] Prompt ID: 86df5c32-68ff-4b9d-b322-576a72bf3c14
+2023-08-14 17:24:50 [INFO] Using cached response
+2023-08-14 17:24:50 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:24:50 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:24:50 [INFO] Executed in: 0.02830362319946289s
+2023-08-14 17:28:11 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:28:23 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:28:23 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:28:23 [INFO] Prompt ID: aa315071-4459-46b3-86e2-7b782c01876d
+2023-08-14 17:28:23 [INFO] Using cached response
+2023-08-14 17:28:23 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:28:23 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:28:23 [INFO] Executed in: 0.022194385528564453s
+2023-08-14 17:29:29 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:29:47 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:29:47 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:29:47 [INFO] Prompt ID: bb31b6f8-60ff-4318-bb39-9acd697ec66f
+2023-08-14 17:29:47 [INFO] Using cached response
+2023-08-14 17:29:47 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:29:47 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:29:47 [INFO] Executed in: 0.03531455993652344s
+2023-08-14 17:30:50 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/chat/views.py changed, reloading.
+2023-08-14 17:31:14 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:31:14 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:31:14 [INFO] Prompt ID: 9337b6a7-44f4-457b-80ea-755521c34883
+2023-08-14 17:31:14 [INFO] Using cached response
+2023-08-14 17:31:14 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:31:14 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:31:14 [INFO] Executed in: 0.020603179931640625s
+2023-08-14 17:32:50 [WARNING] Not Found: /favicon.ico
+2023-08-14 17:33:05 [INFO] Question: shortlist resumes of java
+2023-08-14 17:33:05 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:33:05 [INFO] Prompt ID: cac8efed-8fb6-42bb-bec4-74d462d83af9
+2023-08-14 17:33:09 [INFO] 
+                        Code generated:
+                        ```
+                        java_resumes = df[df['skills'].str.contains('java', case=False)]
+java_resumes
+                        ```
+                    
+2023-08-14 17:33:09 [INFO] 
+Code running:
+```
+java_resumes = df[df['skills'].str.contains('java', case=False)]
+java_resumes
+```
+2023-08-14 17:33:09 [INFO] Answer:     id              name  score        domain                   resume_link  experience  age                                             skills
+2    3      Cherry White    7.3          Mern  https://tinyurl.com/2awlgt7n           3   25  reusable database,Git,Angular,Docker,PHP,Junio...
+5    6        Amie Clude    6.3          Mern  https://tinyurl.com/29jv2lyn           3   40  javascript,python,html,algorithms,git,senior e...
+6    7          Gia park    6.7          Mern  https://tinyurl.com/27z6dgnn           5   35  mongodb,java,automation frameworks,debug,restf...
+15  16   Andrew williams    7.0          Mean  https://tinyurl.com/2akfmr66           5   30  data structures,html,accuracy,jquery,jest,resp...
+16  17       Austin webb    6.7          Mean  https://tinyurl.com/29fs9m2l           3   28  nodejs,reactjs tools,selenium,software enginee...
+17  18       Kathy James    7.1          Mean  https://tinyurl.com/28jxa62t           4   30  rest,jest,responsive,software engineering,fron...
+18  19         Kevin Son    6.4          Mean  https://tinyurl.com/2ytwcxvy           1   25  soap,java programmer,oracle,scalability,java d...
+19  20      Tyler fennel    6.0          Mean  https://tinyurl.com/29v6up5x           2   25  data warehouse,hadoop,python developer,c++,jav...
+20  21           Anthony    8.4          Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+21  22       Felix soren    7.3          Java  https://tinyurl.com/2yxkuk3x           5   35  problem- solving,springboot,javascript,back-en...
+22  23     Nadia Delgado    8.6          Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+23  24        Noah Smith    7.2          Java  https://tinyurl.com/25l5clhp           3   26  agile,postgresql,microservices,spring boot,app...
+24  25     Olivia Miller    7.6          Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+25  26  Samantha Cartner    7.3          Java  https://tinyurl.com/23m8t3tc           2   26  transactions,c++,solve,senior developers,c,css...
+26  27      Silas Thomas    7.6          Java  https://tinyurl.com/29d69dny           2   26  back-end engineer,apis,sql,springboot,ui,javas...
+41  42      David Keelan    6.4  Data Science  https://tinyurl.com/2xt4bgom           3   32  data scientists,my sql,data ingestion,data pip...
+43  44         Josephine    6.9  Data Science  https://tinyurl.com/2y6wt8ff           2   28  microstrategy,engineering,data ingestion,data ...
+46  47       Dante Small    5.7  Data Science  https://tinyurl.com/257hvmcc           4   30  senior developers,js,mobile-friendly,user expe...
+47  48     danial joseph    5.6  Data Science  https://tinyurl.com/25sekr66           3   28  .net,software design,angular.js,application de...
+48  49        James ryan    5.8  Data Science  https://tinyurl.com/2yk6q8qj           3   28  queries,database,algorithm,software design,aja...
+49  50             Sarah    6.1  Data Science  https://tinyurl.com/287o7emo           3   29  travisci,data ﬂows,senior developers,angular.j...
+50  51           Stephen    5.6  Data Science  https://tinyurl.com/23tdnd4l           2   28  js,full stack web developer,lamp,web applicati...
+51  52         Tulingway    6.3  Data Science  https://tinyurl.com/2264u7px           2   28  algorithms,c++,deep learning,machine learning,...
+53  54    Caius ceseller    5.8          Mern  https://tinyurl.com/22968vjv           1   25  algorithms,game development,version control,ar...
+54  55        Charles mc    7.2          Mern  https://tinyurl.com/2c65x6lo           2   27  front-end,analytics,mysql,sql,unix,css,seleniu...
+55  56    chinthya dwana    6.8          Mern  https://tinyurl.com/289x7dfm           1   26  typescript,desk analyst,library,ui,node.js,mys...
+56  57       Dean blythe    6.6          Mern  https://tinyurl.com/23op9wgt           3   27  senior engineers,automation,css,front end,desi...
+57  58    Guilia gonzale    6.7          Mern  https://tinyurl.com/2d588lzy           3   27  database,d3.js,user experience,web application...
+58  59  ilyia karaslavov    6.0          Mern  https://tinyurl.com/27l2evn8           4   28  algorithms,security engineer,software/,web app...
+59  60      Kian marshel    6.1          Mern  https://tinyurl.com/29wzh7qt           5   30  web application,analytics,google software engi...
+61  62     Rhetta Laredo    7.6          Mern  https://tinyurl.com/2dhaqnzv           4   29  typescript,angular.js,front-end,web applicatio...
+63  64  Tamara turbinado    7.0          Mern  https://tinyurl.com/262ekkgs           6   31  cicd,restful api,user experience,front-end,mob...
+64  65     Tasiana Ukura    6.9          Mern  https://tinyurl.com/22n2v4eu           4   29  algorithms,c++,c ++,sql,mysql,cloud-,unix,data...
+65  66       Zara Greene    6.1          Mern  https://tinyurl.com/2brmblex           4   28  database,software theory,version control,softw...
+66  67       Zixin Kuang    6.6          Mern  https://tinyurl.com/27vxg22g           1   28  debugging,full stack java software engineer,we...
+67  68    Chazmin Taylor    7.3          Mean  https://tinyurl.com/28u463da           1   25  data scientist,javascript,excel,scrum,software...
+2023-08-14 17:33:09 [INFO] Executed in: 4.105434894561768s
+2023-08-14 17:36:15 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:36:15 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:36:15 [INFO] Prompt ID: 6b4d172c-a599-4dbc-9059-bf74095e1767
+2023-08-14 17:36:15 [INFO] Using cached response
+2023-08-14 17:36:15 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:36:15 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:36:15 [INFO] Executed in: 0.018888235092163086s
+2023-08-14 17:38:09 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:38:09 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:38:09 [INFO] Prompt ID: 5461e74b-172a-4f7e-a89d-826d75b18a02
+2023-08-14 17:38:09 [INFO] Using cached response
+2023-08-14 17:38:09 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:38:09 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:38:09 [INFO] Executed in: 0.029776811599731445s
+2023-08-14 17:39:08 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:39:08 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:39:08 [INFO] Prompt ID: 605e79b6-40fe-4db9-b3e5-6fa8fcc07c79
+2023-08-14 17:39:08 [INFO] Using cached response
+2023-08-14 17:39:08 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:39:08 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:39:08 [INFO] Executed in: 0.016181230545043945s
+2023-08-14 17:49:03 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:49:03 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:49:03 [INFO] Prompt ID: 14b5ec36-cd4c-49b0-8e76-21840b3d97b2
+2023-08-14 17:49:03 [INFO] Using cached response
+2023-08-14 17:49:03 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:49:03 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:49:03 [INFO] Executed in: 0.014170408248901367s
+2023-08-14 17:50:09 [INFO] Question: top 3 resumes
+2023-08-14 17:50:09 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:50:09 [INFO] Prompt ID: ad6b1285-f5b2-4224-a41b-fb8671e5fea9
+2023-08-14 17:50:14 [INFO] 
+                        Code generated:
+                        ```
+                        top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+                        ```
+                    
+2023-08-14 17:50:14 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:50:14 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:50:14 [INFO] Executed in: 4.7265496253967285s
+2023-08-14 17:50:33 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:50:33 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:50:33 [INFO] Prompt ID: f024f7d7-8d77-44b6-827b-df8892aa820c
+2023-08-14 17:50:33 [INFO] Using cached response
+2023-08-14 17:50:33 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:50:33 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:50:33 [INFO] Executed in: 0.029425382614135742s
+2023-08-14 17:53:44 [WARNING] Not Found: /favicon.ico
+2023-08-14 17:53:50 [INFO] Question: short list top 3 resumes
+2023-08-14 17:53:50 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:53:50 [INFO] Prompt ID: ca19de83-db8f-46d8-b196-c7d281baed60
+2023-08-14 17:53:50 [INFO] Using cached response
+2023-08-14 17:53:50 [INFO] 
+Code running:
+```
+top_resumes = df.nlargest(3, 'score')['resume_link'].tolist()
+top_resumes
+```
+2023-08-14 17:53:50 [INFO] Answer: ['https://tinyurl.com/2yh5884v', 'https://tinyurl.com/2aezy46l', 'https://tinyurl.com/259vq5r3']
+2023-08-14 17:53:50 [INFO] Executed in: 0.010666370391845703s
+2023-08-14 17:54:03 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:54:03 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:54:03 [INFO] Prompt ID: 1de8b60d-bb92-45bf-a6ee-e631c4dfcbb0
+2023-08-14 17:54:03 [INFO] Using cached response
+2023-08-14 17:54:03 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:54:03 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:54:03 [INFO] Executed in: 0.014887809753417969s
+2023-08-14 17:54:55 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:54:55 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:54:55 [INFO] Prompt ID: d2d8cb61-fe51-4a68-a3e7-e48b34fa916c
+2023-08-14 17:54:55 [INFO] Using cached response
+2023-08-14 17:54:55 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:54:55 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:54:55 [INFO] Executed in: 0.020450592041015625s
+2023-08-14 17:55:14 [INFO] Question: in dataframe
+2023-08-14 17:55:14 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:55:14 [INFO] Prompt ID: 63a55344-60d1-4990-b7f8-e1f9cad8a49a
+2023-08-14 17:55:45 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:55:45 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:55:45 [INFO] Prompt ID: 1e4a8807-81e0-4060-8e55-e32ae581a291
+2023-08-14 17:55:45 [INFO] Using cached response
+2023-08-14 17:55:45 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:55:45 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:55:45 [INFO] Executed in: 0.014231681823730469s
+2023-08-14 17:56:06 [INFO] Question: shortlist top 2 resumes in java domain only
+2023-08-14 17:56:06 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:56:06 [INFO] Prompt ID: e39e310e-90f9-4a34-bf21-48b1c6e035fb
+2023-08-14 17:56:10 [INFO] 
+                        Code generated:
+                        ```
+                        top_java_resumes = df[df['domain'] == 'Java'].nlargest(2, 'score')
+top_java_resumes
+                        ```
+                    
+2023-08-14 17:56:10 [INFO] 
+Code running:
+```
+top_java_resumes = df[df['domain'] == 'Java'].nlargest(2, 'score')
+top_java_resumes
+```
+2023-08-14 17:56:10 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+2023-08-14 17:56:10 [INFO] Executed in: 3.919313907623291s
+2023-08-14 17:56:36 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:56:36 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:56:36 [INFO] Prompt ID: 300afacf-dd43-4b80-a506-f856027f42e4
+2023-08-14 17:56:36 [INFO] Using cached response
+2023-08-14 17:56:36 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:56:36 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:56:36 [INFO] Executed in: 0.016390085220336914s
+2023-08-14 17:58:30 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:58:30 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:58:30 [INFO] Prompt ID: b77626af-853e-4aa4-ae3e-e896c6f9ac35
+2023-08-14 17:58:30 [INFO] Using cached response
+2023-08-14 17:58:30 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:58:30 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:58:30 [INFO] Executed in: 0.02728581428527832s
+2023-08-14 17:59:01 [WARNING] Not Found: /favicon.ico
+2023-08-14 17:59:05 [WARNING] Not Found: /...
+2023-08-14 17:59:16 [INFO] Question: shortlist top 3 resumes
+2023-08-14 17:59:16 [INFO] Running PandasAI with openai LLM...
+2023-08-14 17:59:16 [INFO] Prompt ID: cbca5c25-7533-4e9b-acc1-0a0d72fb8b4b
+2023-08-14 17:59:16 [INFO] Using cached response
+2023-08-14 17:59:16 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 17:59:16 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 17:59:16 [INFO] Executed in: 0.019190311431884766s
+2023-08-14 18:02:54 [INFO] Question: shortlist top 3 resumes
+2023-08-14 18:02:54 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:02:54 [INFO] Prompt ID: 9d4c99d1-1312-4ab7-bedf-ad8ae726d246
+2023-08-14 18:02:54 [INFO] Using cached response
+2023-08-14 18:02:54 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:02:54 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:02:54 [INFO] Executed in: 0.025510787963867188s
+2023-08-14 18:03:18 [INFO] Question: shortlist top 3 resumes
+2023-08-14 18:03:18 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:03:18 [INFO] Prompt ID: 5dac9be3-f4a8-420d-a202-4101662e971a
+2023-08-14 18:03:18 [INFO] Using cached response
+2023-08-14 18:03:18 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:03:18 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:03:18 [INFO] Executed in: 0.012022018432617188s
+2023-08-14 18:03:44 [WARNING] Not Found: /favicon.ico
+2023-08-14 18:03:51 [INFO] Question: shortlist top 3 resumes
+2023-08-14 18:03:51 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:03:51 [INFO] Prompt ID: 3029d600-3db9-4ff6-a93c-c7f02ba75d85
+2023-08-14 18:03:51 [INFO] Using cached response
+2023-08-14 18:03:51 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:03:51 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:03:51 [INFO] Executed in: 0.010273933410644531s
+2023-08-14 18:04:37 [INFO] Question: shortlist top 3 resumes
+2023-08-14 18:04:37 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:04:37 [INFO] Prompt ID: b33215df-4666-43d3-8e46-5505592a7ebe
+2023-08-14 18:04:37 [INFO] Using cached response
+2023-08-14 18:04:37 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:04:37 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:04:37 [INFO] Executed in: 0.028751850128173828s
+2023-08-14 18:05:31 [INFO] Question: shortlist top 3 resumes
+2023-08-14 18:05:31 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:05:31 [INFO] Prompt ID: 33abe64f-fb0a-4fef-b4af-43066d2ce345
+2023-08-14 18:05:31 [INFO] Using cached response
+2023-08-14 18:05:31 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:05:31 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:05:31 [INFO] Executed in: 0.02471446990966797s
+2023-08-14 18:06:52 [INFO] Question: shortlist top 3 resumes
+2023-08-14 18:06:52 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:06:52 [INFO] Prompt ID: 6b11c039-e36d-4e22-9daf-653aac8210dd
+2023-08-14 18:06:52 [INFO] Using cached response
+2023-08-14 18:06:52 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:06:52 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:06:52 [INFO] Executed in: 0.02395009994506836s
+2023-08-14 18:07:53 [INFO] Question: shortlist top 5 resumes from Data Science domain
+2023-08-14 18:07:53 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:07:53 [INFO] Prompt ID: 3d080019-d030-46b4-a02b-4d1cd634bd2e
+2023-08-14 18:07:57 [INFO] 
+                        Code generated:
+                        ```
+                        top_5_resumes = df[df['domain'] == 'Data Science'].nlargest(5, 'score')
+top_5_resumes
+                        ```
+                    
+2023-08-14 18:07:57 [INFO] 
+Code running:
+```
+top_5_resumes = df[df['domain'] == 'Data Science'].nlargest(5, 'score')
+top_5_resumes
+```
+2023-08-14 18:07:57 [INFO] Answer:     id          name  score        domain                   resume_link  experience  age                                             skills
+44  45  Judah Berger    7.2  Data Science  https://tinyurl.com/28waxlob           2   28  cloud engineering,data pipeline,visualizations...
+37  38  Avery Rogers    6.9  Data Science  https://tinyurl.com/2bymxpa5           3   28  data models,queries,data engineering,streamlin...
+43  44     Josephine    6.9  Data Science  https://tinyurl.com/2y6wt8ff           2   28  microstrategy,engineering,data ingestion,data ...
+38  39       Brandon    6.8  Data Science  https://tinyurl.com/22u2yj8c           2   27  database,algorithm,software design,data ingest...
+45  46     Kassandra    6.6  Data Science  https://tinyurl.com/27mdedar           3   30  c++,machine learning,sql,engineering challenge...
+2023-08-14 18:07:57 [INFO] Executed in: 3.4504573345184326s
+2023-08-14 18:08:36 [INFO] Question: how many candidates from Data Science domain
+2023-08-14 18:08:36 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:08:36 [INFO] Prompt ID: 0c43a172-c341-4b8d-81a3-1a0dd3b5017b
+2023-08-14 18:08:39 [INFO] 
+                        Code generated:
+                        ```
+                        df[df['domain'] == 'Data Science'].shape[0]
+                        ```
+                    
+2023-08-14 18:08:39 [INFO] 
+Code running:
+```
+df[df['domain'] == 'Data Science'].shape[0]
+```
+2023-08-14 18:08:39 [INFO] Answer: 19
+2023-08-14 18:08:39 [INFO] Executed in: 2.827988386154175s
+2023-08-14 18:10:01 [INFO] Question: shortlist resumes where score is greater than 6.8 in Data Science domain
+2023-08-14 18:10:01 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:10:01 [INFO] Prompt ID: 5d1b72e2-d7c6-4141-b8c7-3ca8359a307b
+2023-08-14 18:10:08 [INFO] 
+                        Code generated:
+                        ```
+                        shortlisted_resumes = df[(df['score'] > 6.8) & (df['domain'] == 'Data Science')]
+print(shortlisted_resumes)
+                        ```
+                    
+2023-08-14 18:10:08 [INFO] 
+Code running:
+```
+shortlisted_resumes = df[(df['score'] > 6.8) & (df['domain'] == 'Data Science')]
+print(shortlisted_resumes)
+```
+2023-08-14 18:10:08 [INFO] Answer:     id          name  score        domain                   resume_link  experience  age                                             skills
+37  38  Avery Rogers    6.9  Data Science  https://tinyurl.com/2bymxpa5           3   28  data models,queries,data engineering,streamlin...
+43  44     Josephine    6.9  Data Science  https://tinyurl.com/2y6wt8ff           2   28  microstrategy,engineering,data ingestion,data ...
+44  45  Judah Berger    7.2  Data Science  https://tinyurl.com/28waxlob           2   28  cloud engineering,data pipeline,visualizations...
+2023-08-14 18:10:08 [INFO] Executed in: 6.628856182098389s
+2023-08-14 18:10:43 [INFO] Question: shortlist top 3 resumes 
+2023-08-14 18:10:43 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:10:43 [INFO] Prompt ID: f502026c-329e-4a4c-b28a-bae412a3031a
+2023-08-14 18:10:46 [INFO] 
+                        Code generated:
+                        ```
+                        top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+                        ```
+                    
+2023-08-14 18:10:46 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:10:46 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:10:46 [INFO] Executed in: 3.407849073410034s
+2023-08-14 18:12:37 [WARNING] Not Found: /...
+2023-08-14 18:12:40 [WARNING] Not Found: /admin/ad
+2023-08-14 18:12:55 [INFO] Question: shortlist top 3 resumes
+2023-08-14 18:12:55 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:12:55 [INFO] Prompt ID: 05200fe7-60f5-4fb3-b49e-82ed48e6bb5a
+2023-08-14 18:12:55 [INFO] Using cached response
+2023-08-14 18:12:55 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:12:55 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:12:55 [INFO] Executed in: 0.13100934028625488s
+2023-08-14 18:13:47 [WARNING] Not Found: /...
+2023-08-14 18:14:05 [INFO] Question: shortlist top 3  resumes 
+2023-08-14 18:14:05 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:14:05 [INFO] Prompt ID: 9583d53a-3b77-40c8-89db-8a0928e9d741
+2023-08-14 18:14:08 [INFO] 
+                        Code generated:
+                        ```
+                        top_resumes = df.nlargest(3, 'score')
+top_resumes
+                        ```
+                    
+2023-08-14 18:14:08 [INFO] 
+Code running:
+```
+top_resumes = df.nlargest(3, 'score')
+top_resumes
+```
+2023-08-14 18:14:08 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:14:08 [INFO] Executed in: 2.788492441177368s
+2023-08-14 18:16:25 [INFO] Question: shortlist top 3 resumes
+2023-08-14 18:16:25 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:16:25 [INFO] Prompt ID: f92d3de6-2c2f-4ba7-88bd-d5c49c1b8292
+2023-08-14 18:16:25 [INFO] Using cached response
+2023-08-14 18:16:25 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:16:25 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:16:25 [INFO] Executed in: 0.015320539474487305s
+2023-08-14 18:23:19 [INFO] Question: shortlist top 3 resumes 
+2023-08-14 18:23:19 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:23:19 [INFO] Prompt ID: 65f1b11a-bb36-4e44-b892-1b1409f84780
+2023-08-14 18:23:19 [INFO] Using cached response
+2023-08-14 18:23:19 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:23:19 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:23:19 [INFO] Executed in: 0.015793561935424805s
+2023-08-14 18:33:33 [INFO] Question: f
+2023-08-14 18:33:33 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:33:33 [INFO] Prompt ID: 1587055d-dbd8-43a3-b24a-7dc6d6e4d17b
+2023-08-14 18:33:34 [INFO] Question: sdf
+2023-08-14 18:33:34 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:33:34 [INFO] Prompt ID: da9f0892-3b52-4354-b111-04884a64e836
+2023-08-14 18:33:35 [INFO] Question: dg
+2023-08-14 18:33:35 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:33:35 [INFO] Prompt ID: 3387f18d-7883-4156-8c09-0b0b1be793ec
+2023-08-14 18:33:36 [INFO] Question: fgj
+2023-08-14 18:33:36 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:33:36 [INFO] Prompt ID: 36b5da10-9341-429c-9e3c-df74dd72a572
+2023-08-14 18:33:38 [INFO] error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-RJwjScqJmwColGodoRJ6FoPa on requests per min. Limit: 3 / min. Please try again in 20s. Contact us through our help center at help.openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://platform.openai.com/account/billing to add a payment method.' error_param=None error_type=requests message='OpenAI API error received' stream_error=False
+2023-08-14 18:38:00 [INFO] Question: hai
+2023-08-14 18:38:00 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:38:00 [INFO] Prompt ID: 1ac9cc97-a233-4961-9d63-8220bc06b455
+2023-08-14 18:39:03 [INFO] Question: hi
+2023-08-14 18:39:03 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:39:03 [INFO] Prompt ID: cf88b383-0614-4d83-891e-430e05f56527
+2023-08-14 18:39:18 [INFO] Question: shortlist top 3 resumes
+2023-08-14 18:39:18 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:39:18 [INFO] Prompt ID: cabe1d61-40e0-4caf-b0f2-d85fa83b45bc
+2023-08-14 18:39:18 [INFO] Using cached response
+2023-08-14 18:39:18 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:39:18 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:39:18 [INFO] Executed in: 0.03137707710266113s
+2023-08-14 18:40:16 [INFO] Question: shortlist top 3 resumes
+2023-08-14 18:40:16 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:40:16 [INFO] Prompt ID: 35516be1-3a9b-41e9-9b79-47f2b6f0c070
+2023-08-14 18:40:16 [INFO] Using cached response
+2023-08-14 18:40:16 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:40:16 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:40:16 [INFO] Executed in: 0.019158601760864258s
+2023-08-14 18:41:07 [INFO] Question: shortlist top 3 resumes
+2023-08-14 18:41:07 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:41:07 [INFO] Prompt ID: 47f77d1c-61ee-411a-8a5e-0699d470642b
+2023-08-14 18:41:07 [INFO] Using cached response
+2023-08-14 18:41:07 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:41:07 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:41:07 [INFO] Executed in: 0.03257918357849121s
+2023-08-14 18:41:33 [INFO] Question: shortlist resumes 2 resumes in java domain
+2023-08-14 18:41:33 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:41:33 [INFO] Prompt ID: 4016a01a-f974-45c1-85e9-26b844b33da8
+2023-08-14 18:42:13 [INFO] Question: shortlist top 3 resumes
+2023-08-14 18:42:13 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:42:13 [INFO] Prompt ID: f53de2c1-f5d1-419f-9c3a-2d1122226695
+2023-08-14 18:42:13 [INFO] Using cached response
+2023-08-14 18:42:13 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:42:13 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:42:13 [INFO] Executed in: 0.024405241012573242s
+2023-08-14 18:42:30 [INFO] Question: shortlist 2 resumes in java domain
+2023-08-14 18:42:30 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:42:30 [INFO] Prompt ID: 366fa581-63aa-45b6-b2d2-433cd7914c9c
+2023-08-14 18:42:39 [INFO] 
+                        Code generated:
+                        ```
+                        shortlisted_resumes = df[df['domain'] == 'Java'].head(2)
+shortlisted_resumes
+                        ```
+                    
+2023-08-14 18:42:39 [INFO] 
+Code running:
+```
+shortlisted_resumes = df[df['domain'] == 'Java'].head(2)
+shortlisted_resumes
+```
+2023-08-14 18:42:39 [INFO] Answer:     id         name  score domain                   resume_link  experience  age                                             skills
+20  21      Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+21  22  Felix soren    7.3   Java  https://tinyurl.com/2yxkuk3x           5   35  problem- solving,springboot,javascript,back-en...
+2023-08-14 18:42:39 [INFO] Executed in: 8.470864057540894s
+2023-08-14 18:51:17 [INFO] Question: shortlist top 3 resums
+2023-08-14 18:51:17 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:51:17 [INFO] Prompt ID: 7de5389f-4640-440e-a510-1ef52ad9b024
+2023-08-14 18:51:20 [INFO] 
+                        Code generated:
+                        ```
+                        top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+                        ```
+                    
+2023-08-14 18:51:20 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:51:20 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:51:20 [INFO] Executed in: 3.078916311264038s
+2023-08-14 18:56:03 [INFO] Question: shortlist top 3 resumes
+2023-08-14 18:56:03 [INFO] Running PandasAI with openai LLM...
+2023-08-14 18:56:03 [INFO] Prompt ID: f3e1fad8-8308-4228-9f11-65dd5ac0ba8c
+2023-08-14 18:56:03 [INFO] Using cached response
+2023-08-14 18:56:03 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-14 18:56:03 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6   Java  https://tinyurl.com/259vq5r3           2   25  java backend developer,debugging,git,mobile ap...
+2023-08-14 18:56:03 [INFO] Executed in: 0.016298770904541016s
+2023-08-15 04:32:13 [INFO] Question: shortlist candidates where score is greater than 8 
+2023-08-15 04:32:13 [INFO] Running PandasAI with openai LLM...
+2023-08-15 04:32:13 [INFO] Prompt ID: 77190b66-7d9f-4ef8-b00c-b55ec6530528
+2023-08-15 04:32:15 [INFO] 
+                        Code generated:
+                        ```
+                        shortlisted_candidates = df[df['score'] > 8]
+shortlisted_candidates
+                        ```
+                    
+2023-08-15 04:32:15 [INFO] 
+Code running:
+```
+shortlisted_candidates = df[df['score'] > 8]
+shortlisted_candidates
+```
+2023-08-15 04:32:15 [INFO] Answer:     id           name  score domain                   resume_link  experience  age                                             skills
+20  21        Anthony    8.4   Java  https://tinyurl.com/2aezy46l           6   35  technologies,javascript,jira,testing,java deve...
+22  23  Nadia Delgado    8.6   Java  https://tinyurl.com/2yh5884v           3   26  junior java developer,web services,sql,javascr...
+2023-08-15 04:32:15 [INFO] Executed in: 2.4599218368530273s
+2023-08-15 04:33:51 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/home/views.py changed, reloading.
+2023-08-15 05:00:04 [INFO] Question: shortlist top 3 resumes
+2023-08-15 05:00:04 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:00:04 [INFO] Prompt ID: 3317f04a-41c3-4408-9d3c-0c358d684a57
+2023-08-15 05:00:04 [INFO] Using cached response
+2023-08-15 05:00:04 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-15 05:00:04 [INFO] Answer:     id           name  score  ... experience age                                             skills
+22  23  Nadia Delgado    8.6  ...          3  26  junior java developer,web services,sql,javascr...
+20  21        Anthony    8.4  ...          6  35  technologies,javascript,jira,testing,java deve...
+24  25  Olivia Miller    7.6  ...          2  25  java backend developer,debugging,git,mobile ap...
+
+[3 rows x 8 columns]
+2023-08-15 05:00:04 [INFO] Executed in: 0.034517526626586914s
+2023-08-15 05:35:27 [INFO] Question: shortlist top 3 resumes
+2023-08-15 05:35:27 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:35:27 [INFO] Prompt ID: 24f5f2f8-799b-4647-81ab-02346bbf3f7e
+2023-08-15 05:35:27 [INFO] Using cached response
+2023-08-15 05:35:27 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-15 05:35:27 [INFO] Answer:     id             name  ...                                          education                                             skills
+24  30  anthony krasano  ...  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+12  18  dante smallwood  ...           b.s. computer science university of ohio  responsive,testing,cli,apis,gitflow,mongodb,to...
+15  21       sarah wong  ...        b.s. computer science university of georgia  bitbucket,apis,restful apis,vue.js,sql,designs...
+
+[3 rows x 12 columns]
+2023-08-15 05:35:27 [INFO] Executed in: 0.03992867469787598s
+2023-08-15 05:35:48 [INFO] Question: shortlist first 3 resumes
+2023-08-15 05:35:48 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:35:48 [INFO] Prompt ID: 6e3d5ed6-d5b9-449c-a71c-23d808f0c433
+2023-08-15 05:35:51 [INFO] 
+                        Code generated:
+                        ```
+                        shortlisted_resumes = df['resume_link'].head(3).tolist()
+shortlisted_resumes
+                        ```
+                    
+2023-08-15 05:35:51 [INFO] 
+Code running:
+```
+shortlisted_resumes = df['resume_link'].head(3).tolist()
+shortlisted_resumes
+```
+2023-08-15 05:35:51 [INFO] Answer: ['https://tinyurl.com/2d5rhbzf', 'https://tinyurl.com/22b5vgqf', 'https://tinyurl.com/2a2q396z']
+2023-08-15 05:35:51 [INFO] Executed in: 3.280897617340088s
+2023-08-15 05:36:12 [INFO] Question: shortlist first three candidates
+2023-08-15 05:36:12 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:36:12 [INFO] Prompt ID: 04cde906-38c7-4b05-a60d-737db00cc4c1
+2023-08-15 05:36:14 [INFO] 
+                        Code generated:
+                        ```
+                        shortlisted_candidates = df.head(3)
+shortlisted_candidates
+                        ```
+                    
+2023-08-15 05:36:14 [INFO] 
+Code running:
+```
+shortlisted_candidates = df.head(3)
+shortlisted_candidates
+```
+2023-08-15 05:36:14 [INFO] Answer:    id             name  ...                                    education                                             skills
+0   6  alexander owens  ...   b.s. data science university of washington  testing,churn prediction,machine learning,data...
+1   7  ambrose horváth  ...  b.s. computer science pepperdine university  convolutional neural network,decision trees,ap...
+2   8      ella nguyen  ...   b.s. data science university of california  atlas,database,predictive,mahout,text classiﬁc...
+
+[3 rows x 12 columns]
+2023-08-15 05:36:14 [INFO] Executed in: 2.0715367794036865s
+2023-08-15 05:36:50 [INFO] Question: who is the last person applied
+2023-08-15 05:36:50 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:36:50 [INFO] Prompt ID: 38805bf0-c3ea-4dc0-adc3-97e654619d03
+2023-08-15 05:36:54 [INFO] 
+                        Code generated:
+                        ```
+                        last_person = df.iloc[-1]['name']
+last_person
+                        ```
+                    
+2023-08-15 05:36:54 [INFO] 
+Code running:
+```
+last_person = df.iloc[-1]['name']
+last_person
+```
+2023-08-15 05:36:54 [INFO] Answer: anthony krasano
+2023-08-15 05:36:54 [INFO] Executed in: 3.6500308513641357s
+2023-08-15 05:37:51 [INFO] Question: how many are from data science domain
+2023-08-15 05:37:51 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:37:51 [INFO] Prompt ID: 59ac0c62-0ea9-4c32-817c-f9e52f64796f
+2023-08-15 05:37:51 [INFO] Using cached response
+2023-08-15 05:37:51 [INFO] 
+Code running:
+```
+df[df['domain'] == 'Data Science'].shape[0]
+```
+2023-08-15 05:37:51 [INFO] Answer: 10
+2023-08-15 05:37:51 [INFO] Executed in: 0.0033996105194091797s
+2023-08-15 05:37:59 [INFO] Question: who have more age
+2023-08-15 05:37:59 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:37:59 [INFO] Prompt ID: d712173b-7f33-4276-8679-474bda568695
+2023-08-15 05:38:01 [INFO] 
+                        Code generated:
+                        ```
+                        df['age'].max()
+                        ```
+                    
+2023-08-15 05:38:01 [INFO] 
+Code running:
+```
+df['age'].max()
+```
+2023-08-15 05:38:01 [INFO] Answer: 59
+2023-08-15 05:38:01 [INFO] Executed in: 1.9216523170471191s
+2023-08-15 05:38:16 [INFO] Question: who have 59 age
+2023-08-15 05:38:16 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:38:16 [INFO] Prompt ID: a2394a02-400c-4943-98c6-93d73c6c1aa4
+2023-08-15 05:38:18 [INFO] 
+                        Code generated:
+                        ```
+                        df[df['age'] == 59]
+                        ```
+                    
+2023-08-15 05:38:18 [INFO] 
+Code running:
+```
+df[df['age'] == 59]
+```
+2023-08-15 05:38:18 [INFO] Answer:    id          name     place  score  ... age experience                 education                                             skills
+6  12  mahdi hakimi  pasadena    6.3  ...  59          4  ca b.s. engineering ucla  statistical methods,correlation ﬁnder,nosql,cr...
+
+[1 rows x 12 columns]
+2023-08-15 05:38:18 [INFO] Executed in: 2.15505313873291s
+2023-08-15 05:41:23 [INFO] Question: shortlist last 2 candidates
+2023-08-15 05:41:23 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:41:23 [INFO] Prompt ID: 7a03ac57-cbd9-4143-9682-e2b7bcd8c99f
+2023-08-15 05:41:26 [INFO] 
+                        Code generated:
+                        ```
+                        df_shortlist = df.tail(2)
+df_shortlist
+                        ```
+                    
+2023-08-15 05:41:26 [INFO] 
+Code running:
+```
+df_shortlist = df.tail(2)
+df_shortlist
+```
+2023-08-15 05:41:26 [INFO] Answer:     id             name  ...                                          education                                             skills
+23  29  andrew williams  ...     b.s. computer science university of washington  responsive,jwt,mongodb,api,web application,com...
+24  30  anthony krasano  ...  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+
+[2 rows x 12 columns]
+2023-08-15 05:41:26 [INFO] Executed in: 3.6499974727630615s
+2023-08-15 05:41:59 [INFO] Question: shortlist last 2 candidates
+2023-08-15 05:41:59 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:41:59 [INFO] Prompt ID: 2170f36c-c969-4c79-aee2-5afff7c60a56
+2023-08-15 05:41:59 [INFO] Using cached response
+2023-08-15 05:41:59 [INFO] 
+Code running:
+```
+df_shortlist = df.tail(2)
+df_shortlist
+```
+2023-08-15 05:41:59 [INFO] Answer:     id             name  ...                                          education                                             skills
+23  29  andrew williams  ...     b.s. computer science university of washington  responsive,jwt,mongodb,api,web application,com...
+24  30  anthony krasano  ...  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+
+[2 rows x 12 columns]
+2023-08-15 05:41:59 [INFO] Executed in: 0.025511741638183594s
+2023-08-15 05:42:16 [INFO] Question: shortlist last 2 resumes
+2023-08-15 05:42:16 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:42:16 [INFO] Prompt ID: 292bc2c3-6450-475a-92ca-3a35d7bf985f
+2023-08-15 05:42:19 [INFO] 
+                        Code generated:
+                        ```
+                        df.tail(2)
+                        ```
+                    
+2023-08-15 05:42:19 [INFO] 
+Code running:
+```
+df.tail(2)
+```
+2023-08-15 05:42:19 [INFO] Answer:     id             name  ...                                          education                                             skills
+23  29  andrew williams  ...     b.s. computer science university of washington  responsive,jwt,mongodb,api,web application,com...
+24  30  anthony krasano  ...  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+
+[2 rows x 12 columns]
+2023-08-15 05:42:19 [INFO] Executed in: 3.013698101043701s
+2023-08-15 05:42:40 [INFO] Question: shortlist last 2 resumes
+2023-08-15 05:42:40 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:42:40 [INFO] Prompt ID: 611532c9-87a5-47b6-a6b9-c7e44aff3498
+2023-08-15 05:42:40 [INFO] Using cached response
+2023-08-15 05:42:40 [INFO] 
+Code running:
+```
+df.tail(2)
+```
+2023-08-15 05:42:40 [INFO] Answer:     id             name  ...                                          education                                             skills
+23  29  andrew williams  ...     b.s. computer science university of washington  responsive,jwt,mongodb,api,web application,com...
+24  30  anthony krasano  ...  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+
+[2 rows x 12 columns]
+2023-08-15 05:42:40 [INFO] Executed in: 0.031250953674316406s
+2023-08-15 05:42:59 [INFO] Question: shortlist last 2 candidates
+2023-08-15 05:42:59 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:42:59 [INFO] Prompt ID: e5990e22-2acf-4191-99f9-0e064c72468b
+2023-08-15 05:42:59 [INFO] Using cached response
+2023-08-15 05:42:59 [INFO] 
+Code running:
+```
+df_shortlist = df.tail(2)
+df_shortlist
+```
+2023-08-15 05:42:59 [INFO] Answer:     id             name  ...                                          education                                             skills
+23  29  andrew williams  ...     b.s. computer science university of washington  responsive,jwt,mongodb,api,web application,com...
+24  30  anthony krasano  ...  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+
+[2 rows x 12 columns]
+2023-08-15 05:42:59 [INFO] Executed in: 0.02673053741455078s
+2023-08-15 05:43:26 [WARNING] Not Found: /favicon.ico
+2023-08-15 05:43:37 [INFO] Question: shortlist last 2 candidates
+2023-08-15 05:43:37 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:43:37 [INFO] Prompt ID: f34f32e2-741b-4e84-9c84-369700f146b6
+2023-08-15 05:43:37 [INFO] Using cached response
+2023-08-15 05:43:37 [INFO] 
+Code running:
+```
+df_shortlist = df.tail(2)
+df_shortlist
+```
+2023-08-15 05:43:37 [INFO] Answer:     id             name    place  ...  experience                                          education                                             skills
+23  29  andrew williams  seattle  ...           3     b.s. computer science university of washington  responsive,jwt,mongodb,api,web application,com...
+24  30  anthony krasano  trenton  ...           5  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+
+[2 rows x 12 columns]
+2023-08-15 05:43:37 [INFO] Executed in: 0.031374454498291016s
+2023-08-15 05:44:24 [WARNING] Not Found: /favicon.ico
+2023-08-15 05:44:32 [INFO] Question: shortlist last 2 candidates
+2023-08-15 05:44:32 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:44:32 [INFO] Prompt ID: 73508867-fb73-4940-8fdb-0ffd1fc1dbe9
+2023-08-15 05:44:32 [INFO] Using cached response
+2023-08-15 05:44:32 [INFO] 
+Code running:
+```
+df_shortlist = df.tail(2)
+df_shortlist
+```
+2023-08-15 05:44:32 [INFO] Answer:     id             name    place  ...  experience                                          education                                             skills
+23  29  andrew williams  seattle  ...           3     b.s. computer science university of washington  responsive,jwt,mongodb,api,web application,com...
+24  30  anthony krasano  trenton  ...           5  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+
+[2 rows x 12 columns]
+2023-08-15 05:44:32 [INFO] Executed in: 0.028452396392822266s
+2023-08-15 05:47:02 [INFO] Question: shortlist first 2 candidates 
+2023-08-15 05:47:02 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:47:02 [INFO] Prompt ID: 70c80c83-d793-4efa-a2af-0a2954a936ce
+2023-08-15 05:47:20 [INFO] Question: shortlist last 2 candidates
+2023-08-15 05:47:20 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:47:20 [INFO] Prompt ID: b20bb17d-7c0e-4b0d-aa49-b3d56871990a
+2023-08-15 05:47:20 [INFO] Using cached response
+2023-08-15 05:47:20 [INFO] 
+Code running:
+```
+df_shortlist = df.tail(2)
+df_shortlist
+```
+2023-08-15 05:47:20 [INFO] Answer:     id             name    place  ...  experience                                          education                                             skills
+23  29  andrew williams  seattle  ...           3     b.s. computer science university of washington  responsive,jwt,mongodb,api,web application,com...
+24  30  anthony krasano  trenton  ...           5  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+
+[2 rows x 12 columns]
+2023-08-15 05:47:20 [INFO] Executed in: 0.022034883499145508s
+2023-08-15 05:49:06 [INFO] Question: shortlist top 3 candidates
+2023-08-15 05:49:06 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:49:06 [INFO] Prompt ID: 37cdb289-1a72-49f2-b3e4-972eed475835
+2023-08-15 05:49:10 [INFO] 
+                        Code generated:
+                        ```
+                        top_3_candidates = df.nlargest(3, 'score')
+top_3_candidates
+                        ```
+                    
+2023-08-15 05:49:10 [INFO] 
+Code running:
+```
+top_3_candidates = df.nlargest(3, 'score')
+top_3_candidates
+```
+2023-08-15 05:49:10 [INFO] Answer:     id             name     place  ...  experience                                          education                                             skills
+24  30  anthony krasano   trenton  ...           5  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+12  18  dante smallwood  columbus  ...          29           b.s. computer science university of ohio  responsive,testing,cli,apis,gitflow,mongodb,to...
+15  21       sarah wong   atlanta  ...           3        b.s. computer science university of georgia  bitbucket,apis,restful apis,vue.js,sql,designs...
+
+[3 rows x 12 columns]
+2023-08-15 05:49:10 [INFO] Executed in: 3.6351311206817627s
+2023-08-15 05:50:28 [INFO] Question: shortlist last 2 candidates
+2023-08-15 05:50:28 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:50:28 [INFO] Prompt ID: 394e695c-26e3-430e-86cf-82a10ff790c7
+2023-08-15 05:50:28 [INFO] Using cached response
+2023-08-15 05:50:28 [INFO] 
+Code running:
+```
+df_shortlist = df.tail(2)
+df_shortlist
+```
+2023-08-15 05:50:28 [INFO] Answer:     id             name    place  ...  experience                                          education                                             skills
+23  29  andrew williams  seattle  ...           3     b.s. computer science university of washington  responsive,jwt,mongodb,api,web application,com...
+24  30  anthony krasano  trenton  ...           5  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+
+[2 rows x 12 columns]
+2023-08-15 05:50:28 [INFO] Executed in: 0.023660659790039062s
+2023-08-15 05:55:34 [INFO] Question: shortlist last 2 candidates
+2023-08-15 05:55:34 [INFO] Running PandasAI with openai LLM...
+2023-08-15 05:55:34 [INFO] Prompt ID: 19b787a2-7474-4f56-b428-db0fa6610c27
+2023-08-15 05:55:34 [INFO] Using cached response
+2023-08-15 05:55:34 [INFO] 
+Code running:
+```
+df_shortlist = df.tail(2)
+df_shortlist
+```
+2023-08-15 05:55:34 [INFO] Answer:     id             name    place  ...  experience                                          education                                             skills
+23  29  andrew williams  seattle  ...           3     b.s. computer science university of washington  responsive,jwt,mongodb,api,web application,com...
+24  30  anthony krasano  trenton  ...           5  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+
+[2 rows x 12 columns]
+2023-08-15 05:55:34 [INFO] Executed in: 0.022281408309936523s
+2023-08-15 05:55:52 [WARNING] Not Found: /favicon.ico
+2023-08-15 06:03:21 [INFO] Question: shortlist top 3 candidates 
+2023-08-15 06:03:21 [INFO] Running PandasAI with openai LLM...
+2023-08-15 06:03:21 [INFO] Prompt ID: 1ce3328e-b897-4b4a-80ec-0f9b4e15c77b
+2023-08-15 06:03:25 [INFO] 
+                        Code generated:
+                        ```
+                        top_3_candidates = df.nlargest(3, 'score')
+top_3_candidates
+                        ```
+                    
+2023-08-15 06:03:25 [INFO] 
+Code running:
+```
+top_3_candidates = df.nlargest(3, 'score')
+top_3_candidates
+```
+2023-08-15 06:03:25 [INFO] Answer:     id             name     place  ...  experience                                          education                                             skills
+24  30  anthony krasano   trenton  ...           5  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+12  18  dante smallwood  columbus  ...          29           b.s. computer science university of ohio  responsive,testing,cli,apis,gitflow,mongodb,to...
+15  21       sarah wong   atlanta  ...           3        b.s. computer science university of georgia  bitbucket,apis,restful apis,vue.js,sql,designs...
+
+[3 rows x 12 columns]
+2023-08-15 06:03:25 [INFO] Executed in: 4.012624502182007s
+2023-08-15 06:04:00 [INFO] Question: shortlist top 3 candidates in Data Science domain
+2023-08-15 06:04:00 [INFO] Running PandasAI with openai LLM...
+2023-08-15 06:04:00 [INFO] Prompt ID: bc6bed59-8df8-41c2-9702-86dd8cbac51f
+2023-08-15 06:04:04 [INFO] 
+                        Code generated:
+                        ```
+                        top_candidates = df[df['domain'] == 'Data Science'].nlargest(3, 'score')
+top_candidates
+                        ```
+                    
+2023-08-15 06:04:04 [INFO] 
+Code running:
+```
+top_candidates = df[df['domain'] == 'Data Science'].nlargest(3, 'score')
+top_candidates
+```
+2023-08-15 06:04:04 [INFO] Answer:    id                 name          place  ...  experience                                       education                                             skills
+2   8          ella nguyen  mountain view  ...           1      b.s. data science university of california  atlas,database,predictive,mahout,text classiﬁc...
+3   9  justine hendrickson        houston  ...           1     b.s. computer science university of houston  charts,analyses,dashboard,pandas,visualization...
+4  10         kaleb saxton        houston  ...           5  b.s. mathematics and economics rice university  python,postgres,sql,scikit- learn,numpy,nosql,...
+
+[3 rows x 12 columns]
+2023-08-15 06:04:04 [INFO] Executed in: 4.119349718093872s
+2023-08-15 06:04:30 [INFO] Question: how many are from Data Science domain
+2023-08-15 06:04:30 [INFO] Running PandasAI with openai LLM...
+2023-08-15 06:04:30 [INFO] Prompt ID: 49c11324-25e1-4462-a295-5444ab7ebbc4
+2023-08-15 06:04:33 [INFO] 
+                        Code generated:
+                        ```
+                        df[df['domain'] == 'Data Science'].shape[0]
+                        ```
+                    
+2023-08-15 06:04:33 [INFO] 
+Code running:
+```
+df[df['domain'] == 'Data Science'].shape[0]
+```
+2023-08-15 06:04:33 [INFO] Answer: 10
+2023-08-15 06:04:33 [INFO] Executed in: 3.329709529876709s
+2023-08-15 06:04:44 [INFO] Question: what is the total number of candidates
+2023-08-15 06:04:44 [INFO] Running PandasAI with openai LLM...
+2023-08-15 06:04:44 [INFO] Prompt ID: a6d85288-886f-44b2-81ff-a0670152bc8e
+2023-08-15 06:04:46 [INFO] 
+                        Code generated:
+                        ```
+                        total_candidates = len(df)
+total_candidates
+                        ```
+                    
+2023-08-15 06:04:46 [INFO] 
+Code running:
+```
+total_candidates = len(df)
+total_candidates
+```
+2023-08-15 06:04:46 [INFO] Answer: 25
+2023-08-15 06:04:46 [INFO] Executed in: 2.4324398040771484s
+2023-08-15 06:06:08 [INFO] Question: shortlist candidates where score is greater than 6.5 in MERN domain
+2023-08-15 06:06:08 [INFO] Running PandasAI with openai LLM...
+2023-08-15 06:06:08 [INFO] Prompt ID: 3cb8e0cc-5d40-4ded-a18f-e77ff753aa22
+2023-08-15 06:06:13 [INFO] 
+                        Code generated:
+                        ```
+                        shortlisted_candidates = df[(df['score'] > 6.5) & (df['domain'] == 'MERN')]
+shortlisted_candidates
+                        ```
+                    
+2023-08-15 06:06:13 [INFO] 
+Code running:
+```
+shortlisted_candidates = df[(df['score'] > 6.5) & (df['domain'] == 'MERN')]
+shortlisted_candidates
+```
+2023-08-15 06:06:13 [INFO] Answer:     id               name          place  ...  experience                                          education                                             skills
+10  16    blythe anderson  san francisco  ...           3  bachelor of arts computer science university o...  node.js,nginx lead full-stack developer,cli,an...
+11  17       cherry white         boston  ...           5  bachelor of science computer science and engin...  node.js,python,javascript,web app,database,gat...
+12  18    dante smallwood       columbus  ...          29           b.s. computer science university of ohio  responsive,testing,cli,apis,gitflow,mongodb,to...
+13  19       aleks ludkee    chattanooga  ...           1      b.s. computer science university of tennessee  developed,spring,connectivity,processing,.net,...
+14  20         james ryan   indianapolis  ...          25        b.s. computer science university of indiana  storage solutions,database,computing infrastru...
+15  21         sarah wong        atlanta  ...           3        b.s. computer science university of georgia  bitbucket,apis,restful apis,vue.js,sql,designs...
+16  22  stjepan antunovic   redwood city  ...           2  bachelor of science computer engineering san f...  testing,react,web apps,web application,ux,mete...
+23  29    andrew williams        seattle  ...           3     b.s. computer science university of washington  responsive,jwt,mongodb,api,web application,com...
+
+[8 rows x 12 columns]
+2023-08-15 06:06:13 [INFO] Executed in: 4.848775386810303s
+2023-08-15 06:09:30 [WARNING] Not Found: /...
+2023-08-15 06:09:30 [WARNING] Not Found: /favicon.ico
+2023-08-15 06:10:07 [WARNING] Not Found: /...
+2023-08-15 06:10:07 [WARNING] Not Found: /...
+2023-08-15 06:10:08 [WARNING] Not Found: /...
+2023-08-15 06:10:12 [WARNING] Not Found: /...
+2023-08-15 06:11:46 [WARNING] Not Found: /...
+2023-08-15 06:12:26 [WARNING] Not Found: /favicon.ico
+2023-08-15 06:13:02 [WARNING] Not Found: /favicon.ico
+2023-08-15 06:15:48 [WARNING] Not Found: /...
+2023-08-15 06:17:00 [WARNING] Not Found: /...
+2023-08-15 06:17:06 [WARNING] Not Found: /...
+2023-08-15 06:43:31 [WARNING] Not Found: /...
+2023-08-15 06:43:32 [WARNING] Not Found: /...
+2023-08-15 06:43:32 [WARNING] Not Found: /...
+2023-08-15 06:43:59 [WARNING] Not Found: /...
+2023-08-15 06:44:01 [WARNING] Not Found: /...
+2023-08-16 04:03:15 [INFO] Question: shortlist top 3 candidates
+2023-08-16 04:03:15 [INFO] Running PandasAI with openai LLM...
+2023-08-16 04:03:15 [INFO] Prompt ID: 686d134b-71ff-41d5-9491-0e0c33827af7
+2023-08-16 04:03:15 [INFO] Using cached response
+2023-08-16 04:03:15 [INFO] 
+Code running:
+```
+top_3_candidates = df.nlargest(3, 'score')
+top_3_candidates
+```
+2023-08-16 04:03:15 [INFO] Answer:     id             name  ...                                          education                                             skills
+24  30  anthony krasano  ...  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+12  18  dante smallwood  ...           b.s. computer science university of ohio  responsive,testing,cli,apis,gitflow,mongodb,to...
+15  21       sarah wong  ...        b.s. computer science university of georgia  bitbucket,apis,restful apis,vue.js,sql,designs...
+
+[3 rows x 12 columns]
+2023-08-16 04:03:15 [INFO] Executed in: 0.042973995208740234s
+2023-08-16 05:22:55 [WARNING] Not Found: /...
+2023-08-16 05:23:03 [WARNING] Not Found: /...
+2023-08-16 05:46:21 [INFO] /home/mohammed_shaneeb/Desktop/AI-JOB-PORTAL/AI_JOB_PORTAL/home/views.py changed, reloading.
+2023-08-18 09:44:56 [INFO] Question: shortlist top 3 resumes
+2023-08-18 09:44:56 [INFO] Running PandasAI with openai LLM...
+2023-08-18 09:44:56 [INFO] Prompt ID: c26e1d24-6119-468d-8165-f1c01d9cb665
+2023-08-18 09:44:56 [INFO] Using cached response
+2023-08-18 09:44:56 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-18 09:44:56 [INFO] Answer:     id  ...                                             skills
+24  30  ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+12  18  ...  responsive,testing,cli,apis,gitflow,mongodb,to...
+15  21  ...  bitbucket,apis,restful apis,vue.js,sql,designs...
+
+[3 rows x 12 columns]
+2023-08-18 09:44:56 [INFO] Executed in: 0.036937713623046875s
+2023-08-22 10:36:31 [INFO] Question: shortlist top 3 candidates 
+2023-08-22 10:36:31 [INFO] Running PandasAI with openai LLM...
+2023-08-22 10:36:31 [INFO] Prompt ID: 817d8a44-c61e-4701-90fc-87dd7c2820ef
+2023-08-22 10:36:31 [INFO] Using cached response
+2023-08-22 10:36:31 [INFO] 
+Code running:
+```
+top_3_candidates = df.nlargest(3, 'score')
+top_3_candidates
+```
+2023-08-22 10:36:31 [INFO] Answer:     id             name     place  ...  experience                                          education                                             skills
+24  30  anthony krasano   trenton  ...           5  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+12  18  dante smallwood  columbus  ...          29           b.s. computer science university of ohio  responsive,testing,cli,apis,gitflow,mongodb,to...
+35  41      kathy james     tulsa  ...          34        b.s. computer science university of alabama  java,django,eclipse,api,version control,javasc...
+
+[3 rows x 12 columns]
+2023-08-22 10:36:31 [INFO] Executed in: 0.09339284896850586s
+2023-08-22 10:37:11 [INFO] Question: shortlist top 3 resumes
+2023-08-22 10:37:11 [INFO] Running PandasAI with openai LLM...
+2023-08-22 10:37:11 [INFO] Prompt ID: 8193ea2e-da7e-4f6a-a313-0f650b3cfbc7
+2023-08-22 10:37:11 [INFO] Using cached response
+2023-08-22 10:37:11 [INFO] 
+Code running:
+```
+top_3_resumes = df.nlargest(3, 'score')
+top_3_resumes
+```
+2023-08-22 10:37:11 [INFO] Answer:     id             name     place  ...  experience                                          education                                             skills
+24  30  anthony krasano   trenton  ...           5  b.s. computer science new jersey institute of ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+12  18  dante smallwood  columbus  ...          29           b.s. computer science university of ohio  responsive,testing,cli,apis,gitflow,mongodb,to...
+35  41      kathy james     tulsa  ...          34        b.s. computer science university of alabama  java,django,eclipse,api,version control,javasc...
+
+[3 rows x 12 columns]
+2023-08-22 10:37:11 [INFO] Executed in: 0.0567014217376709s
+2023-08-22 10:38:05 [INFO] Question: shortlist top 3 candidates in Data Science domain
+2023-08-22 10:38:05 [INFO] Running PandasAI with openai LLM...
+2023-08-22 10:38:05 [INFO] Prompt ID: b1aa4ea1-4d08-48a1-9317-f5af087dd4e8
+2023-08-22 10:38:05 [INFO] Using cached response
+2023-08-22 10:38:05 [INFO] 
+Code running:
+```
+top_candidates = df[df['domain'] == 'Data Science'].nlargest(3, 'score')
+top_candidates
+```
+2023-08-22 10:38:05 [INFO] Answer:    id                 name          place  ...  experience                                       education                                             skills
+2   8          ella nguyen  mountain view  ...           1      b.s. data science university of california  atlas,database,predictive,mahout,text classiﬁc...
+3   9  justine hendrickson        houston  ...           1     b.s. computer science university of houston  charts,analyses,dashboard,pandas,visualization...
+4  10         kaleb saxton        houston  ...           5  b.s. mathematics and economics rice university  python,postgres,sql,scikit- learn,numpy,nosql,...
+
+[3 rows x 12 columns]
+2023-08-22 10:38:05 [INFO] Executed in: 0.06820845603942871s

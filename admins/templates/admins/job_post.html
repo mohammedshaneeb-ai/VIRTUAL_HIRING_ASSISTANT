@@ -1,0 +1,110 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Add Job Details</h1>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Title</label>
+                    {{ form.title }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="domain" class="form-label">Domain</label>
+                    {{ form.domain }}
+                   
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="experience" class="form-label">Short Description</label>
+                    {{ form.content }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="age" class="form-label">Job Description</label>
+                    {{ form.job_description }}
+                    {{ form.image }}
+                    <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Job Details</title>
+    <style>
+        /* Add your CSS styling here */
+        /* For example, you can style the form fields and layout */
+        .job-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .job-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .job-form input[type="text"],
+        .job-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">AI JOB PORTAL</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav d-flex justify-content-center ">
+              <a class="nav-link active fs-5" aria-current="page" href="/">Home</a>
+              <!-- <a class="nav-link fs-5" href="/admin/job_post">Add Job</a> -->
+              <a class="nav-link fs-5 " href="{% url 'chat_home' %}">Chat</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="job-form mt-3">
+        
+        <h2>Add a New Job</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
