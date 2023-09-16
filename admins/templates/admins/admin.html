@@ -66,7 +66,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="/" class="nav-item nav-link active">Home</a>
+                    <a href="admin" class="nav-item nav-link active">Home</a>
                     <a href="{% url 'chat_home' %}" class="nav-item nav-link">Chat</a>
                     
                 </div>
@@ -120,6 +120,9 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Job Listing</h1>
+                <div>
+                    <a href="{% url 'job_post' %}"><button  type="button" class="btn btn-outline-success">Post a Job</button></a>
+                </div>
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
                         <li class="nav-item">
@@ -127,7 +130,9 @@
                                 <h6 class="mt-n1 mb-0">Featured</h6>
                             </a>
                         </li>
+                        
                     </ul>
+                    
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             {% for job in jobs %}

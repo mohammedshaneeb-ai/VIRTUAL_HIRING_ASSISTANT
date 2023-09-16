@@ -2828,3 +2828,24 @@ top_candidates
 
 [3 rows x 12 columns]
 2023-08-22 10:38:05 [INFO] Executed in: 0.06820845603942871s
+2023-09-06 06:14:51 [INFO] Question: shortlist top 3 candidates
+2023-09-06 06:14:51 [INFO] Running PandasAI with openai LLM...
+2023-09-06 06:14:51 [INFO] Prompt ID: ef3790c1-bc9a-41e1-83fa-69356d508a46
+2023-09-06 06:14:51 [INFO] Using cached response
+2023-09-06 06:14:51 [INFO] 
+Code running:
+```
+top_3_candidates = df.nlargest(3, 'score')
+top_3_candidates
+```
+2023-09-06 06:14:51 [INFO] Answer:     id  ...                                             skills
+24  30  ...  testing,design,esb,jenkins,ci,cd,api,css,deplo...
+12  18  ...  responsive,testing,cli,apis,gitflow,mongodb,to...
+35  41  ...  java,django,eclipse,api,version control,javasc...
+
+[3 rows x 12 columns]
+2023-09-06 06:14:51 [INFO] Executed in: 0.029483556747436523s
+2023-09-06 06:15:23 [INFO] Question: shortlist top 5 candidates in Data Science
+2023-09-06 06:15:23 [INFO] Running PandasAI with openai LLM...
+2023-09-06 06:15:23 [INFO] Prompt ID: 1002b83b-a4e5-4c2e-9991-0047c49593a6
+2023-09-06 06:15:24 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: sk-l08xm***************************************7JjH. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
