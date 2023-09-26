@@ -1,9 +1,11 @@
 
 # VIRTUAL HIRING ASSISTANT
 
-This project is helpful for both HR's and candidate's who is applying for job
+In today's competitive job market, I saw an opportunity to simplify and streamline the hiring process for both HR professionals and job candidates.
 
-## What is the problem this project is solving
+
+## What problem does this project solve?
+
 #### In HR side:
 
  if a HR is post a job in any job portal,then HR will get many application. so it is diffucult to setup call for every one who applied. to solve this problem i made a VIRTUAL HIRING ASSISTANT for HR.
